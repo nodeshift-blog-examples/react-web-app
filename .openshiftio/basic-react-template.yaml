@@ -48,7 +48,7 @@ parameters:
   - name: YARN_ENABLED
     description: A flag to enable the use of the Yarn package manager
     displayName: Yarn Enabled
-    value: true
+    value: "true"
     required: false
   - name: GITHUB_WEBHOOK_SECRET
     description: A secret string used to configure the GitHub webhook.
