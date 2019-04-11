@@ -8,7 +8,7 @@ metadata:
     template.openshift.io/provider-display-name: "Red Hat, Inc."
     openshift.io/display-name: "React Web Application"
     description: Build a basic React Web Application
-message: "The following service(s) have been created in your project: ${NAME}.\n\nMore message text here"
+message: "The following service(s) have been created in your project: ${NAME}.\n\n"
 parameters:
   - name: NAME
     displayName: "Name"
