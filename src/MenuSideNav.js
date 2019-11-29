@@ -17,7 +17,7 @@ class MenuSideNav extends Component {
                 isChildOfHeader={false}
                 aria-label="Side navigation">
                 <SideNavItems>
-                    <SideNavMenu title="Community Topics" defaultExpanded={true}>
+                    <SideNavMenu title="Community Topics LOUISE" defaultExpanded={true}>
                         <SideNavMenuItem href="/devops">
                             DevOps
                         </SideNavMenuItem>
