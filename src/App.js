@@ -5,6 +5,7 @@ import MenuSideNav from './MenuSideNav';
 
 class App extends Component {
   render() {
+    console.log("LOUISE logging starts here...");
     return (
       <div className="App">
         <header className="App-header">
