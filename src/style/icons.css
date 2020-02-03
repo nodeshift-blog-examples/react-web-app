@@ -1,0 +1,184 @@
+
+.icon-team {
+	mask-image: url("../images/icon-team.svg");
+	background-color: orange;
+	height: 32px;
+	width: 32px;
+}
+
+.icon-alert {
+	mask-image: url("../images/icon-alert.svg");
+	background-color: red;
+	height: 32px;
+	width: 32px;
+}
+
+.icon-bee {
+	mask-image: url("../images/icon-bee.svg");
+	background-color: blue;
+	height: 32px;
+	width: 32px;
+}
+
+.icon-app {
+	mask-image: url("../images/icon-app.svg");
+	background-color: green;
+	height: 32px;
+	width: 32px;
+}
+
+.icon-recommend {
+	mask-image: url("../images/icon-recommend.svg");
+	height: 32px;
+	width: 32px;
+}
+
+.icon-tool {
+	mask-image: url("../images/icon-tool.svg");
+	height: 32px;
+	width: 32px;
+}
+
+.icon-tag {
+	mask-image: url("../images/icon-tag.svg");
+	height: 32px;
+	width: 32px;
+}
+
+.icon-cloud {
+	mask-image: url("../images/icon-cloud.svg");
+	height: 32px;
+	width: 32px;
+}
+
+.icon-video {
+	mask-image: url("../images/icon-video.svg");
+	height: 32px;
+	width: 32px;
+}
+
+.icon-star-filled {
+	mask-image: url("../images/icon-star-filled.svg");
+	height: 32px;
+	width: 32px;
+}
+
+.icon-help {
+	mask-image: url("../images/icon-help.svg");
+	height: 32px;
+	width: 32px;
+}
+
+.icon-info {
+	mask-image: url("../images/icon-info.svg");
+	height: 32px;
+	width: 32px;
+}
+
+.icon-document {
+	mask-image: url("../images/icon-document.svg");
+	height: 32px;
+	width: 32px;
+}
+
+.icon-blog {
+	mask-image: url("../images/icon-blog.svg");
+	height: 32px;
+	width: 32px;
+}
+
+.icon-wiki {
+	mask-image: url("../images/icon-wiki.svg");
+	height: 32px;
+	width: 32px;
+}
+
+.icon-at {
+	mask-image: url("../images/icon-at.svg");
+	height: 32px;
+	width: 32px;
+}
+
+.icon-chat {
+	mask-image: url("../images/icon-chat.svg");
+	height: 32px;
+	width: 32px;
+}
+
+.icon-event {
+	mask-image: url("../images/icon-event.svg");
+	height: 32px;
+	width: 32px;
+}
+
+.icon-launch {
+	mask-image: url("../images/icon-launch.svg");
+	height: 32px;
+	width: 32px;
+}
+
+.icon-download {
+	mask-image: url("../images/icon-download.svg");
+	height: 32px;
+	width: 32px;
+}
+
+.icon-arrow-right {
+	mask-image: url("../images/icon-arrow-right.svg");
+	height: 32px;
+	width: 32px;
+}
+
+.icon-link {
+	mask-image: url("../images/icon-link.svg");
+	height: 32px;
+	width: 32px;
+}
+
+.icon-user {
+	mask-image: url("../images/icon-user.svg");
+	height: 32px;
+	width: 32px;
+}
+
+.icon-slack {
+	background-image: url("../images/icon-slack.svg");
+	height: 32px;
+	width: 32px;
+}
+
+.icon-devops {
+	background-image: url("../images/hexes-mini-ico-two-rings.svg");
+	height: 32px;
+	width: 32px;
+}
+
+.icon-16 {
+	height: 16px;
+	width: 16px;
+	min-height: 16px;
+	min-width: 16px;
+}
+
+.icon-32 {
+	height: 32px;
+	width: 32px;
+	min-height: 32px;
+	min-width: 32px;
+}
+
+.icon-32-max {
+	max-width: 32px;
+}
+
+.icon-16-max {
+	max-width: 16px;
+}
+
+.icon-center {
+	margin: auto;
+}
+
+.icons-in-center {
+	justify-content: space-evenly;
+}

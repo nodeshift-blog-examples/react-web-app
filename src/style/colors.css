@@ -1,0 +1,99 @@
+.tdsm-color-palette-tile {}
+
+.tdsm-icon-palette-tile {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.tdsm-icon-tile-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.tdsm-feature-text {
+    background-color: red !important;
+    color: white !important;
+}
+
+.tdsm-normal-text {
+    background-color: white !important;
+    color: black !important;
+    height: calc(100vh/2) !important;
+}
+
+/**********************/
+/* BACKGROUND COLOURS */
+/**********************/
+.tdsm-dark-blue {
+    background-color: #000912 !important;
+    color: white;
+}
+
+.tdsm-light-grey {
+    background-color: #f1f0ee !important;
+    color: #000912;
+}
+
+.tdsm-blue {
+    background-color: #0370b0 !important;
+    color: white;
+}
+
+.tdsm-mid-blue {
+    background-color: #012f59 !important;
+    color: white;
+}
+
+.tdsm-red {
+    background-color: #dd2113 !important;
+}
+
+.tdsm-green {
+    background-color: #32af76 !important;
+}
+
+.tdsm-yellow {
+    background-color: orange !important;
+}
+
+.tdsm-white {
+    background-color: white !important;
+}
+
+/**********************/
+/* FONT COLOURS       */
+/**********************/
+
+.tdsm-font-dark-blue {
+    color: #000912 !important;
+}
+
+.tdsm-font-light-grey {
+    color: #f1f0ee !important;
+}
+
+.tdsm-font-blue {
+    color: #0370b0 !important;
+}
+
+.tdsm-font-mid-blue {
+    color: #012f59 !important;
+}
+
+.tdsm-font-red {
+    color: #dd2113 !important;
+}
+
+.tdsm-font-green {
+    color: #32af76 !important;
+}
+
+.tdsm-font-yellow {
+    color: orange !important;
+}
+
+.tdsm-font-white {
+    color: white !important;
+}

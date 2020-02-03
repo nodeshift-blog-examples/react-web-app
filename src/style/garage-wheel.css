@@ -1,0 +1,966 @@
+.innovate-banner-section .innovate-banner-text h2,
+.innovate-banner-section .innovate-banner-text h3,
+.innovate-banner-section .innovate-banner-text h4,
+.innovate-banner-section .innovate-banner-text h5,
+.innovate-banner-section .innovate-banner-text h6,
+.innovate-banner-section .innovate-banner-text a,
+.innovate-banner-section .innovate-banner-text p,
+.innovate-banner-section .innovate-banner-text ul,
+.innovate-banner-section .innovate-banner-text li {
+    color: inherit
+}
+
+.innovate-banner-section .innovate-banner-text p {
+    font-size: inherit
+}
+
+.innovate-banner-section .banner-breadcrumb {
+    margin-bottom: 1rem
+}
+
+.innovate-banner-section .banner-breadcrumb a,
+.innovate-banner-section .banner-links a {
+    display: block;
+    color: white
+}
+
+.innovate-banner-section .banner-links {
+    text-align: right
+}
+
+@media (max-width: 767px) {
+    .innovate-banner-section .banner-links {
+        text-align: left
+    }
+}
+
+.innovate-banner-section .imageLabel {
+    max-width: 30%;
+    float: right
+}
+
+@media (max-width: 767px) {
+    .innovate-banner-section .imageLabel {
+        float: left
+    }
+}
+
+.innovate-banner-section .gmCmaaSButtonTemplate .center {
+    text-align: center
+}
+
+.innovate-banner-section .gmCmaaSButtonTemplate .left {
+    text-align: left
+}
+
+.innovate-banner-section .gmCmaaSButtonTemplate .right {
+    text-align: right
+}
+
+.innovate-banner-section .gmCmaaSButtonTemplate .bmBlueButton.gmCmaaSButton {
+    background: #000000 none repeat scroll 0 0;
+    border-color: #000000
+}
+
+.innovate-banner-section .gmCmaaSButtonTemplate .bmBlueButton.gmCmaaSButton:hover {
+    background: #000000 none repeat scroll 0 0;
+    border-color: #000000
+}
+
+.innovate-banner-section .gmImage img {
+    max-width: 30%
+}
+
+.gmCmaaSButtonTemplate .center {
+    text-align: center
+}
+
+.gmCmaaSButtonTemplate .left {
+    text-align: left
+}
+
+.gmCmaaSButtonTemplate .right {
+    text-align: right
+}
+
+.gmCmaaSButtonTemplate .bmBlueButton.gmCmaaSButton {
+    text-align: center;
+    font-size: 14px;
+    color: #FFFFFF;
+    border-style: solid;
+    border-width: 1px;
+    line-height: 30px;
+    min-width: 150px;
+    background: #0064FF none repeat scroll 0 0;
+    border-color: #0064FF;
+    border-radius: 0px;
+    margin: 30px 0;
+    padding: 5px 25px;
+    display: inline-block
+}
+
+.gmCmaaSButtonTemplate .bmBlueButton.gmCmaaSButton:hover {
+    color: #FFFFFF;
+    background: #0064FF none repeat scroll 0 0;
+    border-color: #0064FF
+}
+
+.gmCmaaSButtonTemplate .bmBlueButton.gmCmaaSButton .btn-label {
+    font-size: inherit;
+    color: inherit
+}
+
+#acceptGdpr input[type=text] {
+    width: 100%
+}
+
+#acceptGdpr input[type=text].error {
+    border: 1px solid red
+}
+
+#acceptGdpr #geography,
+#acceptGdpr #unit {
+    width: 100%
+}
+
+#acceptGdpr .hero_banner {
+    min-height: unset;
+    padding-bottom: 30px
+}
+
+#acceptGdpr .form-check-input {
+    position: absolute
+}
+
+#acceptGdpr .form-check-label {
+    padding-left: 20px
+}
+
+#acceptGdpr .submit {
+    color: #FFFFFF;
+    border-style: solid;
+    border-width: 1px;
+    line-height: 30px;
+    padding: 6px 30px;
+    margin-right: 10px;
+    background: #0064FF none repeat scroll 0 0;
+    border-color: #0064FF
+}
+
+#acceptGdpr .submit:hover {
+    background-color: #6CA8FC;
+    color: #000000
+}
+
+#acceptGdpr .submit:disabled {
+    background: #aeaeae none repeat scroll 0 0;
+    border-color: #aeaeae
+}
+
+#acceptGdpr .decline {
+    color: #FFFFFF;
+    border-style: solid;
+    border-width: 1px;
+    line-height: 30px;
+    padding: 6px 30px;
+    margin-right: 10px;
+    background: #0064FF none repeat scroll 0 0;
+    border-color: #0064FF
+}
+
+#acceptGdpr .gmGridLayoutSection {
+    padding: 60px
+}
+
+#method-page {
+    padding-top: 0
+}
+
+section.home-explore {
+    background-color: #f0f3f6
+}
+
+.methodTabsWheelContainer {
+    background-color: #f0f3f6;
+    overflow-x: hidden
+}
+
+.methodTabsWheelContainer .container {
+    min-width: unset;
+    max-width: unset;
+    width: inherit;
+    margin: inherit;
+    padding-left: unset;
+    padding-right: unset
+}
+
+.methodTabsWheelContainer .wheelExplore:hover {
+    cursor: pointer
+}
+
+.methodTabsWheelContainer .methodTabsWheel .methodTabsWheel-description {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.methodTabsWheelContainer .methodTabsWheel h3 {
+    font-family: "IBMPlexSans Medium", "IBMPlexSans Regular", "IBMPlexSans Light", "Helvetica Neue", Arial, sans-serif
+}
+
+.methodTabsWheelContainer .methodTabsWheel .wheel-caption {
+    padding: 30px 0px 30px 0px
+}
+
+.methodTabsWheelContainer .methodTabsWheel .wheel-links {
+    padding: 30px 0px 30px 0px
+}
+
+.methodTabsWheelContainer .methodTabsWheel .wheel-links a {
+    display: block
+}
+
+.methodTabsWheelContainer .methodTabsWheel .wheel-links .buttons-section {
+    padding-top: 20px
+}
+
+.methodTabsWheelContainer .methodTabsWheel .wheel-links .linkLabel {
+    font-size: 16px;
+    font-family: "IBMPlexSans Medium", "IBMPlexSans Regular", "IBMPlexSans Light", "Helvetica Neue", Arial, sans-serif;
+    color: #5a6872;
+    display: block
+}
+
+.methodTabsWheelContainer .methodTabsWheel .wheel-links .linkSubLabel {
+    display: block
+}
+
+.methodTabsWheelContainer .methodTabsWheel .wheel-links .link {
+    font-size: 16px;
+    font-family: "IBMPlexSans Medium", "IBMPlexSans Regular", "IBMPlexSans Light", "Helvetica Neue", Arial, sans-serif;
+    color: #3d72b3;
+    padding-top: 10px
+}
+
+.methodTabsWheelContainer .methodTabsWheel .btnLink {
+    font-size: 12px;
+    font-family: "IBMPlexSans Medium", "IBMPlexSans Regular", "IBMPlexSans Light", "Helvetica Neue", Arial, sans-serif;
+    height: 30px;
+    padding: 5px 5px 5px 5px;
+    color: #3d72b3;
+    border: 2px solid #3d72b3
+}
+
+.methodTabsWheelContainer .methodTabsWheel .btnIcon {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-right: 5px
+}
+
+.methodTabsWheelContainer .methodTabsWheel .wheelExplore {
+    background: none;
+    padding: 30px 0px
+}
+
+.methodTabsWheelContainer .methodTabsWheel .wheelExplore .liveCycle-svg {
+    margin: auto;
+    background: white;
+    border-radius: 100%;
+    max-width: 300px
+}
+
+.methodTabsWheelContainer .methodTabsWheel .wheelExplore .liveCycle-svg svg {
+    max-width: 300px
+}
+
+@media (min-width: 400px) {
+    .methodTabsWheelContainer .methodTabsWheel .wheelExplore .liveCycle-svg svg {
+        margin: 10px
+    }
+}
+
+.methodTabsWheelContainer .methodTabsWheel .wheelExplore .liveCycle-svg svg .culture-hexagon {
+    fill: #5596E6;
+    stroke: #5596E6
+}
+
+.methodTabsWheelContainer .methodTabsWheel .wheelExplore .liveCycle-svg svg .culture-hexagon.culture-selected {
+    stroke: black
+}
+
+.methodTabsWheelContainer .methodTabsWheel .wheelExplore .liveCycle-svg svg .discover-hexagon {
+    fill: #1BA69F;
+    stroke: #1BA69F
+}
+
+.methodTabsWheelContainer .methodTabsWheel .wheelExplore .liveCycle-svg svg .discover-hexagon.discover-selected {
+    stroke: black
+}
+
+.methodTabsWheelContainer .methodTabsWheel .wheelExplore .liveCycle-svg svg .envision-hexagon {
+    fill: #FAB62F;
+    stroke: #FAB62F
+}
+
+.methodTabsWheelContainer .methodTabsWheel .wheelExplore .liveCycle-svg svg .envision-hexagon.envision-selected {
+    stroke: black
+}
+
+.methodTabsWheelContainer .methodTabsWheel .wheelExplore .liveCycle-svg svg .build-hexagon {
+    fill: #74429A;
+    stroke: #74429A
+}
+
+.methodTabsWheelContainer .methodTabsWheel .wheelExplore .liveCycle-svg svg .build-hexagon.build-selected {
+    stroke: black
+}
+
+.methodTabsWheelContainer .methodTabsWheel .wheelExplore .liveCycle-svg svg .run-hexagon {
+    fill: #DB2981;
+    stroke: #DB2981
+}
+
+.methodTabsWheelContainer .methodTabsWheel .wheelExplore .liveCycle-svg svg .run-hexagon.run-selected {
+    stroke: black
+}
+
+.methodTabsWheelContainer .methodTabsWheel .wheelExplore .liveCycle-svg svg .manage-hexagon {
+    fill: #4D863E;
+    stroke: #4D863E
+}
+
+.methodTabsWheelContainer .methodTabsWheel .wheelExplore .liveCycle-svg svg .manage-hexagon.manage-selected {
+    stroke: black
+}
+
+.methodTabsWheelContainer .methodTabsWheel .wheelExplore .liveCycle-svg svg .learn-hexagon {
+    fill: #F05354;
+    stroke: #F05354
+}
+
+.methodTabsWheelContainer .methodTabsWheel .wheelExplore .liveCycle-svg svg .learn-hexagon.learn-selected {
+    stroke: black
+}
+
+.methodTabsWheelContainer .methodTabsWheel .wheelExplore .liveCycle-svg svg .phase-icon {
+    stroke-miterlimit: 10
+}
+
+.methodTabsWheelContainer .methodTabsWheel .wheelExplore .liveCycle-svg svg .phase-icon.selected {
+    stroke: black;
+    stroke-width: 0.5px;
+    fill: black
+}
+
+.methodTabsWheelContainer .methodTabsWheel .wheelExplore .liveCycle-svg svg .phase-hexagon {
+    stroke-width: 2;
+    stroke-miterlimit: 10
+}
+
+.methodTabsWheelContainer .methodTabsWheel .wheelExplore .liveCycle-svg svg .phase-label.selected {
+    stroke: black;
+    stroke-width: 0.5px;
+    fill: black
+}
+
+.methodTabsWheelContainer {
+    position: relative
+}
+
+.methodTabsWheelContainer .btn,
+.methodTabsWheelContainer .arch-implementation-page .animated-diagram-button,
+.arch-implementation-page .methodTabsWheelContainer .animated-diagram-button,
+.methodTabsWheelContainer .animated-diagram-btn-group .animated-diagram-button,
+.animated-diagram-btn-group .methodTabsWheelContainer .animated-diagram-button {
+    font-size: 18px;
+    padding: 10px 16px;
+    margin-top: 15px
+}
+
+.methodTabsWheelContainer a {
+    color: #0000cc
+}
+
+.methodTabsWheelContainer a:hover {
+    color: #000066
+}
+
+.svg-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    position: relative;
+    float: left;
+    bottom: 0.2em
+}
+
+.svg-icon .path0 {
+    fill: none;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10
+}
+
+.svg-icon .path1 {
+    fill: none;
+    stroke-width: 3;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10
+}
+
+.svg-icon .path2 {
+    fill: none;
+    stroke-width: 3;
+    stroke-miterlimit: 10
+}
+
+.ie-svg-icon {
+    bottom: 55px
+}
+
+.ie-svg-icon>span {
+    display: block;
+    padding-top: 50px
+}
+
+.icon-place {
+    line-height: normal
+}
+
+.methodTabsWheelContainer .wheel-caption .wheel-caption-icon {
+    width: 50px;
+    height: 50px
+}
+
+.methodTabsWheelContainer .wheel-caption .wheel-caption-icon div:first-child {
+    height: inherit
+}
+
+.methodTabs h3 {
+    font-family: "IBMPlexSans Medium", "IBMPlexSans Regular", "IBMPlexSans Light", "Helvetica Neue", Arial, sans-serif
+}
+
+.methodTabs .marginTabs,
+.methodTabs .tabs .tabcontent h2,
+.tabs .tabcontent .methodTabs h2,
+.methodTabs .tabs .tabcontent p,
+.tabs .tabcontent .methodTabs p {
+    margin-left: 15px;
+    padding-left: 15px
+}
+
+.methodTabs .marginTabs .contentTab,
+.methodTabs .tabs .tabcontent h2 .contentTab,
+.tabs .tabcontent .methodTabs h2 .contentTab,
+.methodTabs .tabs .tabcontent p .contentTab,
+.tabs .tabcontent .methodTabs p .contentTab {
+    padding: 0 0 10px 0;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.methodTabs .marginTabs .contentTab div,
+.methodTabs .tabs .tabcontent h2 .contentTab div,
+.tabs .tabcontent .methodTabs h2 .contentTab div,
+.methodTabs .tabs .tabcontent p .contentTab div,
+.tabs .tabcontent .methodTabs p .contentTab div {
+    display: inline-block
+}
+
+.methodTabs .marginTabs .contentTab div.active,
+.methodTabs .tabs .tabcontent h2 .contentTab div.active,
+.tabs .tabcontent .methodTabs h2 .contentTab div.active,
+.methodTabs .tabs .tabcontent p .contentTab div.active,
+.tabs .tabcontent .methodTabs p .contentTab div.active {
+    border-bottom: 2px solid #0064FF
+}
+
+.methodTabs .marginTabs .contentTab div a,
+.methodTabs .tabs .tabcontent h2 .contentTab div a,
+.tabs .tabcontent .methodTabs h2 .contentTab div a,
+.methodTabs .tabs .tabcontent p .contentTab div a,
+.tabs .tabcontent .methodTabs p .contentTab div a {
+    color: #000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    outline: none
+}
+
+.methodTabs .marginTabs .contentTab .tabitem,
+.methodTabs .tabs .tabcontent h2 .contentTab .tabitem,
+.tabs .tabcontent .methodTabs h2 .contentTab .tabitem,
+.methodTabs .tabs .tabcontent p .contentTab .tabitem,
+.tabs .tabcontent .methodTabs p .contentTab .tabitem {
+    padding: 10px 0px;
+    cursor: pointer
+}
+
+.methodTabs .marginTabs .contentTab .tabitem .tablinks,
+.methodTabs .tabs .tabcontent h2 .contentTab .tabitem .tablinks,
+.tabs .tabcontent .methodTabs h2 .contentTab .tabitem .tablinks,
+.methodTabs .tabs .tabcontent p .contentTab .tabitem .tablinks,
+.tabs .tabcontent .methodTabs p .contentTab .tabitem .tablinks {
+    padding: 10px 10px;
+    font-size: 16px;
+    font-family: "IBMPlexSans Medium", "IBMPlexSans Regular", "IBMPlexSans Light", "Helvetica Neue", Arial, sans-serif;
+    color: #000
+}
+
+.methodTabs .marginTabs .contentTab .tabitem .tablinks:hover,
+.methodTabs .tabs .tabcontent h2 .contentTab .tabitem .tablinks:hover,
+.tabs .tabcontent .methodTabs h2 .contentTab .tabitem .tablinks:hover,
+.methodTabs .tabs .tabcontent p .contentTab .tabitem .tablinks:hover,
+.tabs .tabcontent .methodTabs p .contentTab .tabitem .tablinks:hover {
+    color: #0064FF
+}
+
+.methodTabs .marginTabs .contentTab .tabitem .tablinks.selectedPhaseTab,
+.methodTabs .tabs .tabcontent h2 .contentTab .tabitem .tablinks.selectedPhaseTab,
+.tabs .tabcontent .methodTabs h2 .contentTab .tabitem .tablinks.selectedPhaseTab,
+.methodTabs .tabs .tabcontent p .contentTab .tabitem .tablinks.selectedPhaseTab,
+.tabs .tabcontent .methodTabs p .contentTab .tabitem .tablinks.selectedPhaseTab {
+    color: #0064FF;
+    border-bottom: 4px solid #0064FF
+}
+
+.gm-list-component .gm-list-item .gm-list-item-content {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.gm-list-component .gm-list-item .gm-list-item-content .gm-list-item-icon {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0
+}
+
+.gm-list-component .gm-list-item .gm-list-item-content .gm-list-item-icon img {
+    width: 60px;
+    height: 60px;
+    margin-right: 30px
+}
+
+.gmEnlargeWidget {
+    padding: 1em 0;
+    cursor: pointer
+}
+
+.gmEnlargeWidget img {
+    max-width: 100%
+}
+
+.gmEnlargeWidget .enlargeLabel {
+    padding-top: 1em;
+    text-align: center;
+    color: #0064FF
+}
+
+.gmDiagram img {
+    display: none
+}
+
+.gmDiagram svg {
+    max-width: 100%
+}
+
+.gmDiagram svg .diagramStep {
+    cursor: pointer
+}
+
+.gmDiagram g.svgHidden {
+    opacity: 0;
+    stroke-opacity: 0
+}
+
+.gmDiagram .gmDiagramStep {
+    padding-top: 1.5em;
+    display: none
+}
+
+.gmDiagram .gmDiagramStep.showDiagramStep {
+    display: block
+}
+
+.assessment-page .assessment-page-table {
+    padding-top: 40px;
+    padding-bottom: 40px
+}
+
+.assessment-page .assessment-table {
+    display: table;
+    border-spacing: 5px;
+    width: 100%;
+    padding: 20px 0
+}
+
+.assessment-page .assessment-table .assessment-table-head {
+    display: table-header-group;
+    font-family: "IBMPlexSans SemiBold", "IBMPlexSans Bold", "IBMPlexSans Regular", "IBMPlexSans Light", "Helvetica Neue", Arial, sans-serif
+}
+
+.assessment-page .assessment-table .assessment-table-row {
+    display: table-row
+}
+
+.assessment-page .assessment-table .assessment-table-col {
+    display: table-cell;
+    padding: 30px 20px;
+    text-align: center
+}
+
+.assessment-page .assessment-table .assessment-table-col.align-left {
+    text-align: left;
+    padding: 10px 0
+}
+
+.assessment-page .assessment-table .assessment-table-col .level-title {
+    font-family: "IBMPlexSans SemiBold", "IBMPlexSans Bold", "IBMPlexSans Regular", "IBMPlexSans Light", "Helvetica Neue", Arial, sans-serif
+}
+
+.assessment-page .assessment-table .assessment-table-col.clickable-cell {
+    border: solid 1px;
+    border-radius: 10%;
+    cursor: pointer;
+    width: 20%;
+    height: 150px
+}
+
+.assessment-page .assessment-table .assessment-table-col.clickable-cell.selected {
+    background-color: #777677;
+    color: white
+}
+
+.assessment-page .assessment-table .assessment-table-col.clickable-cell.selected.culture-color {
+    background-color: #020A69
+}
+
+.assessment-page .assessment-table .assessment-table-col.clickable-cell.selected.security-color {
+    background-color: #136DFC
+}
+
+.assessment-page .assessment-table .assessment-table-col.clickable-cell.selected.data-color {
+    background-color: #75AFFC
+}
+
+.assessment-page .assessment-table .assessment-table-col.clickable-cell.selected.innovation-color {
+    background-color: #0A40CF
+}
+
+.assessment-page .assessment-table .assessment-table-col.clickable-cell.selected.methodology-color {
+    background-color: #781787
+}
+
+.assessment-page .assessment-table .assessment-table-col.clickable-cell.selected.architecture-color {
+    background-color: #23BBD5
+}
+
+.assessment-page .assessment-table .assessment-table-col.clickable-cell.selected.svc-mgmt-color {
+    background-color: black
+}
+
+.assessment-page button {
+    text-align: center;
+    font-size: 14px;
+    color: #FFFFFF;
+    border-style: solid;
+    border-width: 1px;
+    line-height: 30px;
+    min-width: 150px;
+    background: #0064FF none repeat scroll 0 0;
+    border-color: #0064FF;
+    border-radius: 0px;
+    margin: 30px 0;
+    padding: 5px 25px
+}
+
+.assessment-page .save-form input {
+    width: 100%
+}
+
+.assessment-page .saved-assessment {
+    cursor: pointer
+}
+
+.assessment-page .dimension-title {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer
+}
+
+.assessment-page .dimension-title .dimension-title-text {
+    font-family: "IBMPlexSans SemiBold", "IBMPlexSans Bold", "IBMPlexSans Regular", "IBMPlexSans Light", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.5rem
+}
+
+.assessment-page .dimension-title .dimension-title-info {
+    margin-left: 10px;
+    width: 20px
+}
+
+.assessment-page .dimension-title .dimension-title-img {
+    max-width: 60px;
+    padding: 5px;
+    margin-right: 10px;
+    border: none;
+    display: block;
+}
+
+.assessment-page .dimention-action-item .dimention-action-item-box {
+    height: 100px;
+    overflow: auto;
+    border: solid 0.2px;
+    margin-bottom: 20px;
+    padding: 10px
+}
+
+.assessment-page .dimention-action-item .dimention-action-item-box li {
+    position: relative
+}
+
+.assessment-page .dimention-action-item hr {
+    margin: 50px 0
+}
+
+#infoModal .modal-dialog {
+    top: 65px;
+    max-height: 85%;
+    overflow: auto
+}
+
+@media (min-width: 1200px) {
+    #infoModal .modal-dialog {
+        min-width: 60%
+    }
+}
+
+@media (max-width: 1199px) {
+    #infoModal .modal-dialog {
+        min-width: 90%
+    }
+}
+
+#infoModal .modal-header {
+    border: none
+}
+
+#infoModal .modal-content {
+    background-color: #e0e0e0
+}
+
+#infoModal .modal-content .container {
+    min-width: unset
+}
+
+#infoModal .modal-content li {
+    font-family: "IBMPlexSans Light", "Helvetica Neue", Arial, sans-serif
+}
+
+#infoModal .modal-title {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-family: "IBMPlexSans SemiBold", "IBMPlexSans Bold", "IBMPlexSans Regular", "IBMPlexSans Light", "Helvetica Neue", Arial, sans-serif
+}
+
+#infoModal .modal-title .modal-icon {
+    max-width: 40px;
+    margin-right: 10px;
+}
+
+#infoModal .modal-title .modal-icon img {
+    width: 100%;
+    vertical-align: middle
+}
+
+.innovateNavWheelSvg {
+    padding: 20px
+}
+
+.innovate-banner-wheel svg,
+.innovateNavWheelSvg svg {
+    max-height: 500px;
+    max-width: 100%
+}
+
+.innovate-hexagon:hover {
+    stroke: black;
+    stroke-width: 6
+}
+
+.innovate-banner-wheel .innovate-nav-wheel-component .innovate-outer-ring-text,
+.innovateNavWheelSvg .innovate-nav-wheel-component .innovate-outer-ring-text {
+    fill: white
+}
+
+.innovate-banner-wheel .innovate-nav-wheel-component:hover,
+.innovateNavWheelSvg .innovate-nav-wheel-component:hover {
+    cursor: pointer;
+}
+
+.innovate-banner-wheel .innovate-nav-wheel-component.selected-black .innovate-hexagon,
+.innovate-banner-wheel .innovate-nav-wheel-component.selected-black .innovate-outer-ring,
+.innovateNavWheelSvg .innovate-nav-wheel-component.selected-black .innovate-hexagon,
+.innovateNavWheelSvg .innovate-nav-wheel-component.selected-black .innovate-outer-ring {
+    stroke: black;
+    stroke-width: 6
+}
+
+.innovate-banner-wheel .innovate-nav-wheel-component.selected-black .innovate-text-icon,
+.innovate-banner-wheel .innovate-nav-wheel-component.selected-black .innovate-outer-ring-text,
+.innovateNavWheelSvg .innovate-nav-wheel-component.selected-black .innovate-text-icon,
+.innovateNavWheelSvg .innovate-nav-wheel-component.selected-black .innovate-outer-ring-text {
+    fill: black
+}
+
+.innovate-banner-wheel .innovate-nav-wheel-component.selected-medium-blue .innovate-outer-ring,
+.innovateNavWheelSvg .innovate-nav-wheel-component.selected-medium-blue .innovate-outer-ring {
+    stroke: black;
+    stroke-width: 6;
+    fill: #aeaeae
+}
+
+.innovate-banner-wheel .innovate-nav-wheel-component.selected-medium-blue .innovate-outer-ring.inner-ring,
+.innovateNavWheelSvg .innovate-nav-wheel-component.selected-medium-blue .innovate-outer-ring.inner-ring {
+    fill: #c7c7c7
+}
+
+.innovate-banner-wheel .innovate-nav-wheel-component.selected-medium-blue .innovate-outer-ring-text,
+.innovateNavWheelSvg .innovate-nav-wheel-component.selected-medium-blue .innovate-outer-ring-text {
+    fill: black
+}
+
+.innovate-banner-wheel .innovate-nav-wheel-component.selected-black-highlighted .innovate-hexagon,
+.innovate-banner-wheel .innovate-nav-wheel-component.selected-black-highlighted .innovate-outer-ring,
+.innovateNavWheelSvg .innovate-nav-wheel-component.selected-black-highlighted .innovate-hexagon,
+.innovateNavWheelSvg .innovate-nav-wheel-component.selected-black-highlighted .innovate-outer-ring {
+    stroke: black;
+    stroke-width: 6
+}
+
+.innovate-banner-wheel .innovate-nav-wheel-component.selected-black-highlighted .innovate-text-icon,
+.innovate-banner-wheel .innovate-nav-wheel-component.selected-black-highlighted .innovate-outer-ring-text,
+.innovateNavWheelSvg .innovate-nav-wheel-component.selected-black-highlighted .innovate-text-icon,
+.innovateNavWheelSvg .innovate-nav-wheel-component.selected-black-highlighted .innovate-outer-ring-text {
+    fill: black
+}
+
+.innovate-banner-wheel .innovate-nav-wheel-component.selected-medium-blue-highlighted .innovate-outer-ring,
+.innovateNavWheelSvg .innovate-nav-wheel-component.selected-medium-blue-highlighted .innovate-outer-ring {
+    stroke: black;
+    stroke-width: 6;
+    fill: #aeaeae
+}
+
+.innovate-banner-wheel .innovate-nav-wheel-component.selected-medium-blue-highlighted .innovate-outer-ring.inner-ring,
+.innovateNavWheelSvg .innovate-nav-wheel-component.selected-medium-blue-highlighted .innovate-outer-ring.inner-ring {
+    fill: #c7c7c7
+}
+
+.innovate-banner-wheel .innovate-nav-wheel-component.selected-medium-blue-highlighted .innovate-outer-ring-text,
+.innovateNavWheelSvg .innovate-nav-wheel-component.selected-medium-blue-highlighted .innovate-outer-ring-text {
+    fill: black
+}
+
+#ibm-only-notice {
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    background: black;
+    padding: 10px 20px
+}
+
+#ibm-only-notice .notice-text {
+    color: white
+}
+
+#congratsModal {
+    background-image: url(/cloud/garage/images/davinci/fireworks.png);
+    background-position: center;
+    background-size: cover;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    height: 100%;
+    width: 100%
+}
+
+#congratsModal .congratsText {
+    text-align: center;
+    width: 100%
+}
+
+#congratsModal h1,
+#congratsModal h2,
+#congratsModal h3 {
+    color: white
+}
+
+#garageModal {
+    z-index: 1000;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    overflow-y: hidden;
+    display: none
+}
+
+#garageModal .content {
+    height: 400px;
+    max-height: 90%;
+    width: 600px
+}
+
+#garageModal .content button.close {
+    position: absolute;
+    right: 20px;
+    color: white;
+    opacity: 0.5
+}
+
+#garageModal .content button.close span {
+    color: inherit;
+    font-size: 32px
+}

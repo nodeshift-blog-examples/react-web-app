@@ -1,0 +1,4915 @@
+@font-face {
+	font-family: "w3ds-icons";
+	src: url('./icons/w3ds-icons.woff2') format('woff2'),
+		url('./icons/w3ds-icons.woff') format('woff'),
+		url('./icons/w3ds-icons.ttf') format('truetype');
+}
+
+@mixin ds-icon-styles {
+	font-family: "w3ds-icons";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: .9;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+	display: inline-block;
+	vertical-align: middle;
+	padding-bottom: 3px;
+}
+
+%ds-icon {
+	@include ds-icon-styles;
+}
+
+@function ds-icon-char($filename) {
+	$char: "";
+
+	@if $filename == area-chart-l {
+		$char: unquote('"\\E001"');
+	}
+	@if $filename == area-chart-m-l {
+		$char: unquote('"\\E002"');
+	}
+	@if $filename == area-chart-m {
+		$char: unquote('"\\E003"');
+	}
+	@if $filename == area-chart {
+		$char: unquote('"\\E004"');
+	}
+	@if $filename == bar-chart-l {
+		$char: unquote('"\\E005"');
+	}
+	@if $filename == bar-chart-m-l {
+		$char: unquote('"\\E006"');
+	}
+	@if $filename == bar-chart-m {
+		$char: unquote('"\\E007"');
+	}
+	@if $filename == bar-chart {
+		$char: unquote('"\\E008"');
+	}
+	@if $filename == line-chart-l {
+		$char: unquote('"\\E009"');
+	}
+	@if $filename == line-chart-m-l {
+		$char: unquote('"\\E00A"');
+	}
+	@if $filename == line-chart-m {
+		$char: unquote('"\\E00B"');
+	}
+	@if $filename == line-chart {
+		$char: unquote('"\\E00C"');
+	}
+	@if $filename == pie-chart-l {
+		$char: unquote('"\\E00D"');
+	}
+	@if $filename == pie-chart-m-l {
+		$char: unquote('"\\E00E"');
+	}
+	@if $filename == pie-chart-m {
+		$char: unquote('"\\E00F"');
+	}
+	@if $filename == pie-chart {
+		$char: unquote('"\\E010"');
+	}
+	@if $filename == tree-map-l {
+		$char: unquote('"\\E011"');
+	}
+	@if $filename == tree-map-m-l {
+		$char: unquote('"\\E012"');
+	}
+	@if $filename == tree-map-m {
+		$char: unquote('"\\E013"');
+	}
+	@if $filename == tree-map {
+		$char: unquote('"\\E014"');
+	}
+	@if $filename == align-center-l {
+		$char: unquote('"\\E015"');
+	}
+	@if $filename == align-center-m-l {
+		$char: unquote('"\\E016"');
+	}
+	@if $filename == align-center-m {
+		$char: unquote('"\\E017"');
+	}
+	@if $filename == align-center {
+		$char: unquote('"\\E018"');
+	}
+	@if $filename == align-justify-l {
+		$char: unquote('"\\E019"');
+	}
+	@if $filename == align-justify-m-l {
+		$char: unquote('"\\E01A"');
+	}
+	@if $filename == align-justify-m {
+		$char: unquote('"\\E01B"');
+	}
+	@if $filename == align-justify {
+		$char: unquote('"\\E01C"');
+	}
+	@if $filename == align-left-l {
+		$char: unquote('"\\E01D"');
+	}
+	@if $filename == align-left-m-l {
+		$char: unquote('"\\E01E"');
+	}
+	@if $filename == align-left-m {
+		$char: unquote('"\\E01F"');
+	}
+	@if $filename == align-left {
+		$char: unquote('"\\E020"');
+	}
+	@if $filename == align-right-l {
+		$char: unquote('"\\E021"');
+	}
+	@if $filename == align-right-m-l {
+		$char: unquote('"\\E022"');
+	}
+	@if $filename == align-right-m {
+		$char: unquote('"\\E023"');
+	}
+	@if $filename == align-right {
+		$char: unquote('"\\E024"');
+	}
+	@if $filename == clear-formatting-l {
+		$char: unquote('"\\E025"');
+	}
+	@if $filename == clear-formatting-m-l {
+		$char: unquote('"\\E026"');
+	}
+	@if $filename == clear-formatting-m {
+		$char: unquote('"\\E027"');
+	}
+	@if $filename == clear-formatting {
+		$char: unquote('"\\E028"');
+	}
+	@if $filename == copy-l {
+		$char: unquote('"\\E029"');
+	}
+	@if $filename == copy-m-l {
+		$char: unquote('"\\E02A"');
+	}
+	@if $filename == copy-m {
+		$char: unquote('"\\E02B"');
+	}
+	@if $filename == copy {
+		$char: unquote('"\\E02C"');
+	}
+	@if $filename == cut-l {
+		$char: unquote('"\\E02D"');
+	}
+	@if $filename == cut-m-l {
+		$char: unquote('"\\E02E"');
+	}
+	@if $filename == cut-m {
+		$char: unquote('"\\E02F"');
+	}
+	@if $filename == cut {
+		$char: unquote('"\\E030"');
+	}
+	@if $filename == fill-color-l {
+		$char: unquote('"\\E031"');
+	}
+	@if $filename == fill-color-m-l {
+		$char: unquote('"\\E032"');
+	}
+	@if $filename == fill-color-m {
+		$char: unquote('"\\E033"');
+	}
+	@if $filename == fill-color {
+		$char: unquote('"\\E034"');
+	}
+	@if $filename == indent-left-l {
+		$char: unquote('"\\E035"');
+	}
+	@if $filename == indent-left-m-l {
+		$char: unquote('"\\E036"');
+	}
+	@if $filename == indent-left-m {
+		$char: unquote('"\\E037"');
+	}
+	@if $filename == indent-left {
+		$char: unquote('"\\E038"');
+	}
+	@if $filename == indent-right-l {
+		$char: unquote('"\\E039"');
+	}
+	@if $filename == indent-right-m-l {
+		$char: unquote('"\\E03A"');
+	}
+	@if $filename == indent-right-m {
+		$char: unquote('"\\E03B"');
+	}
+	@if $filename == indent-right {
+		$char: unquote('"\\E03C"');
+	}
+	@if $filename == insert-l {
+		$char: unquote('"\\E03D"');
+	}
+	@if $filename == insert-m-l {
+		$char: unquote('"\\E03E"');
+	}
+	@if $filename == insert-m {
+		$char: unquote('"\\E03F"');
+	}
+	@if $filename == insert {
+		$char: unquote('"\\E040"');
+	}
+	@if $filename == list-ordered-l {
+		$char: unquote('"\\E041"');
+	}
+	@if $filename == list-ordered-m-l {
+		$char: unquote('"\\E042"');
+	}
+	@if $filename == list-ordered-m {
+		$char: unquote('"\\E043"');
+	}
+	@if $filename == list-ordered {
+		$char: unquote('"\\E044"');
+	}
+	@if $filename == list-unordered-l {
+		$char: unquote('"\\E045"');
+	}
+	@if $filename == list-unordered-m-l {
+		$char: unquote('"\\E046"');
+	}
+	@if $filename == list-unordered-m {
+		$char: unquote('"\\E047"');
+	}
+	@if $filename == list-unordered {
+		$char: unquote('"\\E048"');
+	}
+	@if $filename == paste-l {
+		$char: unquote('"\\E049"');
+	}
+	@if $filename == paste-m-l {
+		$char: unquote('"\\E04A"');
+	}
+	@if $filename == paste-m {
+		$char: unquote('"\\E04B"');
+	}
+	@if $filename == paste {
+		$char: unquote('"\\E04C"');
+	}
+	@if $filename == type-bold-l {
+		$char: unquote('"\\E04D"');
+	}
+	@if $filename == type-bold-m-l {
+		$char: unquote('"\\E04E"');
+	}
+	@if $filename == type-bold-m {
+		$char: unquote('"\\E04F"');
+	}
+	@if $filename == type-bold {
+		$char: unquote('"\\E050"');
+	}
+	@if $filename == type-italic-l {
+		$char: unquote('"\\E051"');
+	}
+	@if $filename == type-italic-m-l {
+		$char: unquote('"\\E052"');
+	}
+	@if $filename == type-italic-m {
+		$char: unquote('"\\E053"');
+	}
+	@if $filename == type-italic {
+		$char: unquote('"\\E054"');
+	}
+	@if $filename == type-size-l {
+		$char: unquote('"\\E055"');
+	}
+	@if $filename == type-size-m-l {
+		$char: unquote('"\\E056"');
+	}
+	@if $filename == type-size-m {
+		$char: unquote('"\\E057"');
+	}
+	@if $filename == type-size {
+		$char: unquote('"\\E058"');
+	}
+	@if $filename == type-underline-l {
+		$char: unquote('"\\E059"');
+	}
+	@if $filename == type-underline-m-l {
+		$char: unquote('"\\E05A"');
+	}
+	@if $filename == type-underline-m {
+		$char: unquote('"\\E05B"');
+	}
+	@if $filename == type-underline {
+		$char: unquote('"\\E05C"');
+	}
+	@if $filename == add-folder-l {
+		$char: unquote('"\\E05D"');
+	}
+	@if $filename == add-folder-m-l {
+		$char: unquote('"\\E05E"');
+	}
+	@if $filename == add-folder-m {
+		$char: unquote('"\\E05F"');
+	}
+	@if $filename == add-folder {
+		$char: unquote('"\\E060"');
+	}
+	@if $filename == add-page-l {
+		$char: unquote('"\\E061"');
+	}
+	@if $filename == add-page-m-l {
+		$char: unquote('"\\E062"');
+	}
+	@if $filename == add-page-m {
+		$char: unquote('"\\E063"');
+	}
+	@if $filename == add-page {
+		$char: unquote('"\\E064"');
+	}
+	@if $filename == file-audio-l {
+		$char: unquote('"\\E065"');
+	}
+	@if $filename == file-audio-m-l {
+		$char: unquote('"\\E066"');
+	}
+	@if $filename == file-audio-m {
+		$char: unquote('"\\E067"');
+	}
+	@if $filename == file-audio {
+		$char: unquote('"\\E068"');
+	}
+	@if $filename == file-check-l {
+		$char: unquote('"\\E069"');
+	}
+	@if $filename == file-check-m-l {
+		$char: unquote('"\\E06A"');
+	}
+	@if $filename == file-check-m {
+		$char: unquote('"\\E06B"');
+	}
+	@if $filename == file-check {
+		$char: unquote('"\\E06C"');
+	}
+	@if $filename == file-code-l {
+		$char: unquote('"\\E06D"');
+	}
+	@if $filename == file-code-m-l {
+		$char: unquote('"\\E06E"');
+	}
+	@if $filename == file-code-m {
+		$char: unquote('"\\E06F"');
+	}
+	@if $filename == file-code {
+		$char: unquote('"\\E070"');
+	}
+	@if $filename == file-doc-l {
+		$char: unquote('"\\E071"');
+	}
+	@if $filename == file-doc-m-l {
+		$char: unquote('"\\E072"');
+	}
+	@if $filename == file-doc-m {
+		$char: unquote('"\\E073"');
+	}
+	@if $filename == file-doc {
+		$char: unquote('"\\E074"');
+	}
+	@if $filename == file-image-l {
+		$char: unquote('"\\E075"');
+	}
+	@if $filename == file-image-m-l {
+		$char: unquote('"\\E076"');
+	}
+	@if $filename == file-image-m {
+		$char: unquote('"\\E077"');
+	}
+	@if $filename == file-image {
+		$char: unquote('"\\E078"');
+	}
+	@if $filename == file-jpg-l {
+		$char: unquote('"\\E079"');
+	}
+	@if $filename == file-jpg-m-l {
+		$char: unquote('"\\E07A"');
+	}
+	@if $filename == file-jpg-m {
+		$char: unquote('"\\E07B"');
+	}
+	@if $filename == file-jpg {
+		$char: unquote('"\\E07C"');
+	}
+	@if $filename == file-l {
+		$char: unquote('"\\E07D"');
+	}
+	@if $filename == file-m-l {
+		$char: unquote('"\\E07E"');
+	}
+	@if $filename == file-m {
+		$char: unquote('"\\E07F"');
+	}
+	@if $filename == file-pdf-l {
+		$char: unquote('"\\E080"');
+	}
+	@if $filename == file-pdf-m-l {
+		$char: unquote('"\\E081"');
+	}
+	@if $filename == file-pdf-m {
+		$char: unquote('"\\E082"');
+	}
+	@if $filename == file-pdf {
+		$char: unquote('"\\E083"');
+	}
+	@if $filename == file-ppt-l {
+		$char: unquote('"\\E084"');
+	}
+	@if $filename == file-ppt-m-l {
+		$char: unquote('"\\E085"');
+	}
+	@if $filename == file-ppt-m {
+		$char: unquote('"\\E086"');
+	}
+	@if $filename == file-ppt {
+		$char: unquote('"\\E087"');
+	}
+	@if $filename == file-sketch-l {
+		$char: unquote('"\\E088"');
+	}
+	@if $filename == file-sketch-m-l {
+		$char: unquote('"\\E089"');
+	}
+	@if $filename == file-sketch-m {
+		$char: unquote('"\\E08A"');
+	}
+	@if $filename == file-sketch {
+		$char: unquote('"\\E08B"');
+	}
+	@if $filename == file-text-l {
+		$char: unquote('"\\E08C"');
+	}
+	@if $filename == file-text-m-l {
+		$char: unquote('"\\E08D"');
+	}
+	@if $filename == file-text-m {
+		$char: unquote('"\\E08E"');
+	}
+	@if $filename == file-text {
+		$char: unquote('"\\E08F"');
+	}
+	@if $filename == file-video-l {
+		$char: unquote('"\\E090"');
+	}
+	@if $filename == file-video-m-l {
+		$char: unquote('"\\E091"');
+	}
+	@if $filename == file-video-m {
+		$char: unquote('"\\E092"');
+	}
+	@if $filename == file-video {
+		$char: unquote('"\\E093"');
+	}
+	@if $filename == file-xls-l {
+		$char: unquote('"\\E094"');
+	}
+	@if $filename == file-xls-m-l {
+		$char: unquote('"\\E095"');
+	}
+	@if $filename == file-xls-m {
+		$char: unquote('"\\E096"');
+	}
+	@if $filename == file-xls {
+		$char: unquote('"\\E097"');
+	}
+	@if $filename == file-zip-l {
+		$char: unquote('"\\E098"');
+	}
+	@if $filename == file-zip-m-l {
+		$char: unquote('"\\E099"');
+	}
+	@if $filename == file-zip-m {
+		$char: unquote('"\\E09A"');
+	}
+	@if $filename == file-zip {
+		$char: unquote('"\\E09B"');
+	}
+	@if $filename == file {
+		$char: unquote('"\\E09C"');
+	}
+	@if $filename == folder-l {
+		$char: unquote('"\\E09D"');
+	}
+	@if $filename == folder-m-l {
+		$char: unquote('"\\E09E"');
+	}
+	@if $filename == folder-m {
+		$char: unquote('"\\E09F"');
+	}
+	@if $filename == folder {
+		$char: unquote('"\\E0A0"');
+	}
+	@if $filename == mic-off-fill-l {
+		$char: unquote('"\\E0A1"');
+	}
+	@if $filename == mic-off-fill-m-l {
+		$char: unquote('"\\E0A2"');
+	}
+	@if $filename == mic-off-fill-m {
+		$char: unquote('"\\E0A3"');
+	}
+	@if $filename == mic-off-fill {
+		$char: unquote('"\\E0A4"');
+	}
+	@if $filename == mic-off-l {
+		$char: unquote('"\\E0A5"');
+	}
+	@if $filename == mic-off-m-l {
+		$char: unquote('"\\E0A6"');
+	}
+	@if $filename == mic-off-m {
+		$char: unquote('"\\E0A7"');
+	}
+	@if $filename == mic-off {
+		$char: unquote('"\\E0A8"');
+	}
+	@if $filename == mic-on-fill-l {
+		$char: unquote('"\\E0A9"');
+	}
+	@if $filename == mic-on-fill-m-l {
+		$char: unquote('"\\E0AA"');
+	}
+	@if $filename == mic-on-fill-m {
+		$char: unquote('"\\E0AB"');
+	}
+	@if $filename == mic-on-fill {
+		$char: unquote('"\\E0AC"');
+	}
+	@if $filename == mic-on-l {
+		$char: unquote('"\\E0AD"');
+	}
+	@if $filename == mic-on-m-l {
+		$char: unquote('"\\E0AE"');
+	}
+	@if $filename == mic-on-m {
+		$char: unquote('"\\E0AF"');
+	}
+	@if $filename == mic-on {
+		$char: unquote('"\\E0B0"');
+	}
+	@if $filename == pause-fill-l {
+		$char: unquote('"\\E0B1"');
+	}
+	@if $filename == pause-fill-m-l {
+		$char: unquote('"\\E0B2"');
+	}
+	@if $filename == pause-fill-m {
+		$char: unquote('"\\E0B3"');
+	}
+	@if $filename == pause-fill {
+		$char: unquote('"\\E0B4"');
+	}
+	@if $filename == pause-l {
+		$char: unquote('"\\E0B5"');
+	}
+	@if $filename == pause-m-l {
+		$char: unquote('"\\E0B6"');
+	}
+	@if $filename == pause-m {
+		$char: unquote('"\\E0B7"');
+	}
+	@if $filename == pause {
+		$char: unquote('"\\E0B8"');
+	}
+	@if $filename == play-fill-l {
+		$char: unquote('"\\E0B9"');
+	}
+	@if $filename == play-fill-m-l {
+		$char: unquote('"\\E0BA"');
+	}
+	@if $filename == play-fill-m {
+		$char: unquote('"\\E0BB"');
+	}
+	@if $filename == play-fill {
+		$char: unquote('"\\E0BC"');
+	}
+	@if $filename == play-l {
+		$char: unquote('"\\E0BD"');
+	}
+	@if $filename == play-m-l {
+		$char: unquote('"\\E0BE"');
+	}
+	@if $filename == play-m {
+		$char: unquote('"\\E0BF"');
+	}
+	@if $filename == play {
+		$char: unquote('"\\E0C0"');
+	}
+	@if $filename == stop-fill-l {
+		$char: unquote('"\\E0C1"');
+	}
+	@if $filename == stop-fill-m-l {
+		$char: unquote('"\\E0C2"');
+	}
+	@if $filename == stop-fill-m {
+		$char: unquote('"\\E0C3"');
+	}
+	@if $filename == stop-fill {
+		$char: unquote('"\\E0C4"');
+	}
+	@if $filename == stop-l {
+		$char: unquote('"\\E0C5"');
+	}
+	@if $filename == stop-m-l {
+		$char: unquote('"\\E0C6"');
+	}
+	@if $filename == stop-m {
+		$char: unquote('"\\E0C7"');
+	}
+	@if $filename == stop {
+		$char: unquote('"\\E0C8"');
+	}
+	@if $filename == video-fill-l {
+		$char: unquote('"\\E0C9"');
+	}
+	@if $filename == video-fill-m-l {
+		$char: unquote('"\\E0CA"');
+	}
+	@if $filename == video-fill-m {
+		$char: unquote('"\\E0CB"');
+	}
+	@if $filename == video-fill {
+		$char: unquote('"\\E0CC"');
+	}
+	@if $filename == video-l {
+		$char: unquote('"\\E0CD"');
+	}
+	@if $filename == video-m-l {
+		$char: unquote('"\\E0CE"');
+	}
+	@if $filename == video-m {
+		$char: unquote('"\\E0CF"');
+	}
+	@if $filename == video {
+		$char: unquote('"\\E0D0"');
+	}
+	@if $filename == volume-0-fill-l {
+		$char: unquote('"\\E0D1"');
+	}
+	@if $filename == volume-0-fill-m-l {
+		$char: unquote('"\\E0D2"');
+	}
+	@if $filename == volume-0-fill-m {
+		$char: unquote('"\\E0D3"');
+	}
+	@if $filename == volume-0-fill {
+		$char: unquote('"\\E0D4"');
+	}
+	@if $filename == volume-0-l {
+		$char: unquote('"\\E0D5"');
+	}
+	@if $filename == volume-0-m-l {
+		$char: unquote('"\\E0D6"');
+	}
+	@if $filename == volume-0-m {
+		$char: unquote('"\\E0D7"');
+	}
+	@if $filename == volume-0 {
+		$char: unquote('"\\E0D8"');
+	}
+	@if $filename == volume-1-fill-l {
+		$char: unquote('"\\E0D9"');
+	}
+	@if $filename == volume-1-fill-m-l {
+		$char: unquote('"\\E0DA"');
+	}
+	@if $filename == volume-1-fill-m {
+		$char: unquote('"\\E0DB"');
+	}
+	@if $filename == volume-1-fill {
+		$char: unquote('"\\E0DC"');
+	}
+	@if $filename == volume-1-l {
+		$char: unquote('"\\E0DD"');
+	}
+	@if $filename == volume-1-m-l {
+		$char: unquote('"\\E0DE"');
+	}
+	@if $filename == volume-1-m {
+		$char: unquote('"\\E0DF"');
+	}
+	@if $filename == volume-1 {
+		$char: unquote('"\\E0E0"');
+	}
+	@if $filename == volume-2-fill-l {
+		$char: unquote('"\\E0E1"');
+	}
+	@if $filename == volume-2-fill-m-l {
+		$char: unquote('"\\E0E2"');
+	}
+	@if $filename == volume-2-fill-m {
+		$char: unquote('"\\E0E3"');
+	}
+	@if $filename == volume-2-fill {
+		$char: unquote('"\\E0E4"');
+	}
+	@if $filename == volume-2-l {
+		$char: unquote('"\\E0E5"');
+	}
+	@if $filename == volume-2-m-l {
+		$char: unquote('"\\E0E6"');
+	}
+	@if $filename == volume-2-m {
+		$char: unquote('"\\E0E7"');
+	}
+	@if $filename == volume-2 {
+		$char: unquote('"\\E0E8"');
+	}
+	@if $filename == volume-3-fill-l {
+		$char: unquote('"\\E0E9"');
+	}
+	@if $filename == volume-3-fill-m-l {
+		$char: unquote('"\\E0EA"');
+	}
+	@if $filename == volume-3-fill-m {
+		$char: unquote('"\\E0EB"');
+	}
+	@if $filename == volume-3-fill {
+		$char: unquote('"\\E0EC"');
+	}
+	@if $filename == volume-3-l {
+		$char: unquote('"\\E0ED"');
+	}
+	@if $filename == volume-3-m-l {
+		$char: unquote('"\\E0EE"');
+	}
+	@if $filename == volume-3-m {
+		$char: unquote('"\\E0EF"');
+	}
+	@if $filename == volume-3 {
+		$char: unquote('"\\E0F0"');
+	}
+	@if $filename == volume-down-fill-l {
+		$char: unquote('"\\E0F1"');
+	}
+	@if $filename == volume-down-fill-m-l {
+		$char: unquote('"\\E0F2"');
+	}
+	@if $filename == volume-down-fill-m {
+		$char: unquote('"\\E0F3"');
+	}
+	@if $filename == volume-down-fill {
+		$char: unquote('"\\E0F4"');
+	}
+	@if $filename == volume-down-l {
+		$char: unquote('"\\E0F5"');
+	}
+	@if $filename == volume-down-m-l {
+		$char: unquote('"\\E0F6"');
+	}
+	@if $filename == volume-down-m {
+		$char: unquote('"\\E0F7"');
+	}
+	@if $filename == volume-down {
+		$char: unquote('"\\E0F8"');
+	}
+	@if $filename == volume-off-fill-l {
+		$char: unquote('"\\E0F9"');
+	}
+	@if $filename == volume-off-fill-m-l {
+		$char: unquote('"\\E0FA"');
+	}
+	@if $filename == volume-off-fill-m {
+		$char: unquote('"\\E0FB"');
+	}
+	@if $filename == volume-off-fill {
+		$char: unquote('"\\E0FC"');
+	}
+	@if $filename == volume-off-l {
+		$char: unquote('"\\E0FD"');
+	}
+	@if $filename == volume-off-m-l {
+		$char: unquote('"\\E0FE"');
+	}
+	@if $filename == volume-off-m {
+		$char: unquote('"\\E0FF"');
+	}
+	@if $filename == volume-off {
+		$char: unquote('"\\E100"');
+	}
+	@if $filename == volume-up-fill-l {
+		$char: unquote('"\\E101"');
+	}
+	@if $filename == volume-up-fill-m-l {
+		$char: unquote('"\\E102"');
+	}
+	@if $filename == volume-up-fill-m {
+		$char: unquote('"\\E103"');
+	}
+	@if $filename == volume-up-fill {
+		$char: unquote('"\\E104"');
+	}
+	@if $filename == volume-up-l {
+		$char: unquote('"\\E105"');
+	}
+	@if $filename == volume-up-m-l {
+		$char: unquote('"\\E106"');
+	}
+	@if $filename == volume-up-m {
+		$char: unquote('"\\E107"');
+	}
+	@if $filename == volume-up {
+		$char: unquote('"\\E108"');
+	}
+	@if $filename == facebook-l {
+		$char: unquote('"\\E109"');
+	}
+	@if $filename == facebook-m-l {
+		$char: unquote('"\\E10A"');
+	}
+	@if $filename == facebook-m {
+		$char: unquote('"\\E10B"');
+	}
+	@if $filename == facebook {
+		$char: unquote('"\\E10C"');
+	}
+	@if $filename == github-l {
+		$char: unquote('"\\E10D"');
+	}
+	@if $filename == github-m-l {
+		$char: unquote('"\\E10E"');
+	}
+	@if $filename == github-m {
+		$char: unquote('"\\E10F"');
+	}
+	@if $filename == github {
+		$char: unquote('"\\E110"');
+	}
+	@if $filename == googleplus-l {
+		$char: unquote('"\\E111"');
+	}
+	@if $filename == googleplus-m-l {
+		$char: unquote('"\\E112"');
+	}
+	@if $filename == googleplus-m {
+		$char: unquote('"\\E113"');
+	}
+	@if $filename == googleplus {
+		$char: unquote('"\\E114"');
+	}
+	@if $filename == instagram-l {
+		$char: unquote('"\\E115"');
+	}
+	@if $filename == instagram-m-l {
+		$char: unquote('"\\E116"');
+	}
+	@if $filename == instagram-m {
+		$char: unquote('"\\E117"');
+	}
+	@if $filename == instagram {
+		$char: unquote('"\\E118"');
+	}
+	@if $filename == linkedin-l {
+		$char: unquote('"\\E119"');
+	}
+	@if $filename == linkedin-m-l {
+		$char: unquote('"\\E11A"');
+	}
+	@if $filename == linkedin-m {
+		$char: unquote('"\\E11B"');
+	}
+	@if $filename == linkedin {
+		$char: unquote('"\\E11C"');
+	}
+	@if $filename == slack-l {
+		$char: unquote('"\\E11D"');
+	}
+	@if $filename == slack-m-l {
+		$char: unquote('"\\E11E"');
+	}
+	@if $filename == slack-m {
+		$char: unquote('"\\E11F"');
+	}
+	@if $filename == slack {
+		$char: unquote('"\\E120"');
+	}
+	@if $filename == twitter-l {
+		$char: unquote('"\\E121"');
+	}
+	@if $filename == twitter-m-l {
+		$char: unquote('"\\E122"');
+	}
+	@if $filename == twitter-m {
+		$char: unquote('"\\E123"');
+	}
+	@if $filename == twitter {
+		$char: unquote('"\\E124"');
+	}
+	@if $filename == youtube-l {
+		$char: unquote('"\\E125"');
+	}
+	@if $filename == youtube-m-l {
+		$char: unquote('"\\E126"');
+	}
+	@if $filename == youtube-m {
+		$char: unquote('"\\E127"');
+	}
+	@if $filename == youtube {
+		$char: unquote('"\\E128"');
+	}
+	@if $filename == announcement-l {
+		$char: unquote('"\\E129"');
+	}
+	@if $filename == announcement-m-l {
+		$char: unquote('"\\E12A"');
+	}
+	@if $filename == announcement-m {
+		$char: unquote('"\\E12B"');
+	}
+	@if $filename == announcement {
+		$char: unquote('"\\E12C"');
+	}
+	@if $filename == chat-l {
+		$char: unquote('"\\E12D"');
+	}
+	@if $filename == chat-m-l {
+		$char: unquote('"\\E12E"');
+	}
+	@if $filename == chat-m {
+		$char: unquote('"\\E12F"');
+	}
+	@if $filename == chat {
+		$char: unquote('"\\E130"');
+	}
+	@if $filename == comment-l {
+		$char: unquote('"\\E131"');
+	}
+	@if $filename == comment-m-l {
+		$char: unquote('"\\E132"');
+	}
+	@if $filename == comment-m {
+		$char: unquote('"\\E133"');
+	}
+	@if $filename == comment {
+		$char: unquote('"\\E134"');
+	}
+	@if $filename == forum-l {
+		$char: unquote('"\\E135"');
+	}
+	@if $filename == forum-m-l {
+		$char: unquote('"\\E136"');
+	}
+	@if $filename == forum-m {
+		$char: unquote('"\\E137"');
+	}
+	@if $filename == forum {
+		$char: unquote('"\\E138"');
+	}
+	@if $filename == heart-fill-l {
+		$char: unquote('"\\E139"');
+	}
+	@if $filename == heart-fill-m-l {
+		$char: unquote('"\\E13A"');
+	}
+	@if $filename == heart-fill-m {
+		$char: unquote('"\\E13B"');
+	}
+	@if $filename == heart-fill {
+		$char: unquote('"\\E13C"');
+	}
+	@if $filename == heart-l {
+		$char: unquote('"\\E13D"');
+	}
+	@if $filename == heart-m-l {
+		$char: unquote('"\\E13E"');
+	}
+	@if $filename == heart-m {
+		$char: unquote('"\\E13F"');
+	}
+	@if $filename == heart {
+		$char: unquote('"\\E140"');
+	}
+	@if $filename == mail-l {
+		$char: unquote('"\\E141"');
+	}
+	@if $filename == mail-m-l {
+		$char: unquote('"\\E142"');
+	}
+	@if $filename == mail-m {
+		$char: unquote('"\\E143"');
+	}
+	@if $filename == mail {
+		$char: unquote('"\\E144"');
+	}
+	@if $filename == notification-l {
+		$char: unquote('"\\E145"');
+	}
+	@if $filename == notification-m-l {
+		$char: unquote('"\\E146"');
+	}
+	@if $filename == notification-m {
+		$char: unquote('"\\E147"');
+	}
+	@if $filename == notification {
+		$char: unquote('"\\E148"');
+	}
+	@if $filename == phone-l {
+		$char: unquote('"\\E149"');
+	}
+	@if $filename == phone-m-l {
+		$char: unquote('"\\E14A"');
+	}
+	@if $filename == phone-m {
+		$char: unquote('"\\E14B"');
+	}
+	@if $filename == phone {
+		$char: unquote('"\\E14C"');
+	}
+	@if $filename == role-l {
+		$char: unquote('"\\E14D"');
+	}
+	@if $filename == role-m-l {
+		$char: unquote('"\\E14E"');
+	}
+	@if $filename == role-m {
+		$char: unquote('"\\E14F"');
+	}
+	@if $filename == role {
+		$char: unquote('"\\E150"');
+	}
+	@if $filename == rss-l {
+		$char: unquote('"\\E151"');
+	}
+	@if $filename == rss-m-l {
+		$char: unquote('"\\E152"');
+	}
+	@if $filename == rss-m {
+		$char: unquote('"\\E153"');
+	}
+	@if $filename == rss {
+		$char: unquote('"\\E154"');
+	}
+	@if $filename == sentiment-dead-l {
+		$char: unquote('"\\E155"');
+	}
+	@if $filename == sentiment-dead-m-l {
+		$char: unquote('"\\E156"');
+	}
+	@if $filename == sentiment-dead-m {
+		$char: unquote('"\\E157"');
+	}
+	@if $filename == sentiment-dead {
+		$char: unquote('"\\E158"');
+	}
+	@if $filename == sentiment-great-l {
+		$char: unquote('"\\E159"');
+	}
+	@if $filename == sentiment-great-m-l {
+		$char: unquote('"\\E15A"');
+	}
+	@if $filename == sentiment-great-m {
+		$char: unquote('"\\E15B"');
+	}
+	@if $filename == sentiment-great {
+		$char: unquote('"\\E15C"');
+	}
+	@if $filename == sentiment-meh-l {
+		$char: unquote('"\\E15D"');
+	}
+	@if $filename == sentiment-meh-m-l {
+		$char: unquote('"\\E15E"');
+	}
+	@if $filename == sentiment-meh-m {
+		$char: unquote('"\\E15F"');
+	}
+	@if $filename == sentiment-meh {
+		$char: unquote('"\\E160"');
+	}
+	@if $filename == sentiment-mute-l {
+		$char: unquote('"\\E161"');
+	}
+	@if $filename == sentiment-mute-m-l {
+		$char: unquote('"\\E162"');
+	}
+	@if $filename == sentiment-mute-m {
+		$char: unquote('"\\E163"');
+	}
+	@if $filename == sentiment-mute {
+		$char: unquote('"\\E164"');
+	}
+	@if $filename == sentiment-sad-l {
+		$char: unquote('"\\E165"');
+	}
+	@if $filename == sentiment-sad-m-l {
+		$char: unquote('"\\E166"');
+	}
+	@if $filename == sentiment-sad-m {
+		$char: unquote('"\\E167"');
+	}
+	@if $filename == sentiment-sad {
+		$char: unquote('"\\E168"');
+	}
+	@if $filename == sentiment-smile-l {
+		$char: unquote('"\\E169"');
+	}
+	@if $filename == sentiment-smile-m-l {
+		$char: unquote('"\\E16A"');
+	}
+	@if $filename == sentiment-smile-m {
+		$char: unquote('"\\E16B"');
+	}
+	@if $filename == sentiment-smile {
+		$char: unquote('"\\E16C"');
+	}
+	@if $filename == sentiment-wink-l {
+		$char: unquote('"\\E16D"');
+	}
+	@if $filename == sentiment-wink-m-l {
+		$char: unquote('"\\E16E"');
+	}
+	@if $filename == sentiment-wink-m {
+		$char: unquote('"\\E16F"');
+	}
+	@if $filename == sentiment-wink {
+		$char: unquote('"\\E170"');
+	}
+	@if $filename == sentiment-wow-l {
+		$char: unquote('"\\E171"');
+	}
+	@if $filename == sentiment-wow-m-l {
+		$char: unquote('"\\E172"');
+	}
+	@if $filename == sentiment-wow-m {
+		$char: unquote('"\\E173"');
+	}
+	@if $filename == sentiment-wow {
+		$char: unquote('"\\E174"');
+	}
+	@if $filename == share-l {
+		$char: unquote('"\\E175"');
+	}
+	@if $filename == share-m-l {
+		$char: unquote('"\\E176"');
+	}
+	@if $filename == share-m {
+		$char: unquote('"\\E177"');
+	}
+	@if $filename == share {
+		$char: unquote('"\\E178"');
+	}
+	@if $filename == star-fill-l {
+		$char: unquote('"\\E179"');
+	}
+	@if $filename == star-fill-m-l {
+		$char: unquote('"\\E17A"');
+	}
+	@if $filename == star-fill-m {
+		$char: unquote('"\\E17B"');
+	}
+	@if $filename == star-fill {
+		$char: unquote('"\\E17C"');
+	}
+	@if $filename == star-half-l {
+		$char: unquote('"\\E17D"');
+	}
+	@if $filename == star-half-m-l {
+		$char: unquote('"\\E17E"');
+	}
+	@if $filename == star-half-m {
+		$char: unquote('"\\E17F"');
+	}
+	@if $filename == star-half {
+		$char: unquote('"\\E180"');
+	}
+	@if $filename == star-l {
+		$char: unquote('"\\E181"');
+	}
+	@if $filename == star-m-l {
+		$char: unquote('"\\E182"');
+	}
+	@if $filename == star-m {
+		$char: unquote('"\\E183"');
+	}
+	@if $filename == star {
+		$char: unquote('"\\E184"');
+	}
+	@if $filename == team-l {
+		$char: unquote('"\\E185"');
+	}
+	@if $filename == team-m-l {
+		$char: unquote('"\\E186"');
+	}
+	@if $filename == team-m {
+		$char: unquote('"\\E187"');
+	}
+	@if $filename == team {
+		$char: unquote('"\\E188"');
+	}
+	@if $filename == thumbs-down-l {
+		$char: unquote('"\\E189"');
+	}
+	@if $filename == thumbs-down-m-l {
+		$char: unquote('"\\E18A"');
+	}
+	@if $filename == thumbs-down-m {
+		$char: unquote('"\\E18B"');
+	}
+	@if $filename == thumbs-down {
+		$char: unquote('"\\E18C"');
+	}
+	@if $filename == thumbs-up-l {
+		$char: unquote('"\\E18D"');
+	}
+	@if $filename == thumbs-up-m-l {
+		$char: unquote('"\\E18E"');
+	}
+	@if $filename == thumbs-up-m {
+		$char: unquote('"\\E18F"');
+	}
+	@if $filename == thumbs-up {
+		$char: unquote('"\\E190"');
+	}
+	@if $filename == video-chat-l {
+		$char: unquote('"\\E191"');
+	}
+	@if $filename == video-chat-m-l {
+		$char: unquote('"\\E192"');
+	}
+	@if $filename == video-chat-m {
+		$char: unquote('"\\E193"');
+	}
+	@if $filename == video-chat {
+		$char: unquote('"\\E194"');
+	}
+	@if $filename == archive-l {
+		$char: unquote('"\\E195"');
+	}
+	@if $filename == archive-m-l {
+		$char: unquote('"\\E196"');
+	}
+	@if $filename == archive-m {
+		$char: unquote('"\\E197"');
+	}
+	@if $filename == archive {
+		$char: unquote('"\\E198"');
+	}
+	@if $filename == attachment-l {
+		$char: unquote('"\\E199"');
+	}
+	@if $filename == attachment-m-l {
+		$char: unquote('"\\E19A"');
+	}
+	@if $filename == attachment-m {
+		$char: unquote('"\\E19B"');
+	}
+	@if $filename == attachment {
+		$char: unquote('"\\E19C"');
+	}
+	@if $filename == bookmark-l {
+		$char: unquote('"\\E19D"');
+	}
+	@if $filename == bookmark-m-l {
+		$char: unquote('"\\E19E"');
+	}
+	@if $filename == bookmark-m {
+		$char: unquote('"\\E19F"');
+	}
+	@if $filename == bookmark {
+		$char: unquote('"\\E1A0"');
+	}
+	@if $filename == close-circle-l {
+		$char: unquote('"\\E1A1"');
+	}
+	@if $filename == close-circle-m-l {
+		$char: unquote('"\\E1A2"');
+	}
+	@if $filename == close-circle-m {
+		$char: unquote('"\\E1A3"');
+	}
+	@if $filename == close-circle {
+		$char: unquote('"\\E1A4"');
+	}
+	@if $filename == close-l {
+		$char: unquote('"\\E1A5"');
+	}
+	@if $filename == close-m-l {
+		$char: unquote('"\\E1A6"');
+	}
+	@if $filename == close-m {
+		$char: unquote('"\\E1A7"');
+	}
+	@if $filename == close {
+		$char: unquote('"\\E1A8"');
+	}
+	@if $filename == cloud-download-l {
+		$char: unquote('"\\E1A9"');
+	}
+	@if $filename == cloud-download-m-l {
+		$char: unquote('"\\E1AA"');
+	}
+	@if $filename == cloud-download-m {
+		$char: unquote('"\\E1AB"');
+	}
+	@if $filename == cloud-download {
+		$char: unquote('"\\E1AC"');
+	}
+	@if $filename == cloud-upload-l {
+		$char: unquote('"\\E1AD"');
+	}
+	@if $filename == cloud-upload-m-l {
+		$char: unquote('"\\E1AE"');
+	}
+	@if $filename == cloud-upload-m {
+		$char: unquote('"\\E1AF"');
+	}
+	@if $filename == cloud-upload {
+		$char: unquote('"\\E1B0"');
+	}
+	@if $filename == dashboard-l {
+		$char: unquote('"\\E1B1"');
+	}
+	@if $filename == dashboard-m-l {
+		$char: unquote('"\\E1B2"');
+	}
+	@if $filename == dashboard-m {
+		$char: unquote('"\\E1B3"');
+	}
+	@if $filename == dashboard {
+		$char: unquote('"\\E1B4"');
+	}
+	@if $filename == download-l {
+		$char: unquote('"\\E1B5"');
+	}
+	@if $filename == download-m-l {
+		$char: unquote('"\\E1B6"');
+	}
+	@if $filename == download-m {
+		$char: unquote('"\\E1B7"');
+	}
+	@if $filename == download {
+		$char: unquote('"\\E1B8"');
+	}
+	@if $filename == drag-and-drop-l {
+		$char: unquote('"\\E1B9"');
+	}
+	@if $filename == drag-and-drop-m-l {
+		$char: unquote('"\\E1BA"');
+	}
+	@if $filename == drag-and-drop-m {
+		$char: unquote('"\\E1BB"');
+	}
+	@if $filename == drag-and-drop {
+		$char: unquote('"\\E1BC"');
+	}
+	@if $filename == edit-document-l {
+		$char: unquote('"\\E1BD"');
+	}
+	@if $filename == edit-document-m-l {
+		$char: unquote('"\\E1BE"');
+	}
+	@if $filename == edit-document-m {
+		$char: unquote('"\\E1BF"');
+	}
+	@if $filename == edit-document {
+		$char: unquote('"\\E1C0"');
+	}
+	@if $filename == edit-l {
+		$char: unquote('"\\E1C1"');
+	}
+	@if $filename == edit-m-l {
+		$char: unquote('"\\E1C2"');
+	}
+	@if $filename == edit-m {
+		$char: unquote('"\\E1C3"');
+	}
+	@if $filename == edit {
+		$char: unquote('"\\E1C4"');
+	}
+	@if $filename == expand-l {
+		$char: unquote('"\\E1C5"');
+	}
+	@if $filename == expand-m-l {
+		$char: unquote('"\\E1C6"');
+	}
+	@if $filename == expand-m {
+		$char: unquote('"\\E1C7"');
+	}
+	@if $filename == expand {
+		$char: unquote('"\\E1C8"');
+	}
+	@if $filename == export-l {
+		$char: unquote('"\\E1C9"');
+	}
+	@if $filename == export-m-l {
+		$char: unquote('"\\E1CA"');
+	}
+	@if $filename == export-m {
+		$char: unquote('"\\E1CB"');
+	}
+	@if $filename == export {
+		$char: unquote('"\\E1CC"');
+	}
+	@if $filename == filter-l {
+		$char: unquote('"\\E1CD"');
+	}
+	@if $filename == filter-m-l {
+		$char: unquote('"\\E1CE"');
+	}
+	@if $filename == filter-m {
+		$char: unquote('"\\E1CF"');
+	}
+	@if $filename == filter {
+		$char: unquote('"\\E1D0"');
+	}
+	@if $filename == first-page-l {
+		$char: unquote('"\\E1D1"');
+	}
+	@if $filename == first-page-m-l {
+		$char: unquote('"\\E1D2"');
+	}
+	@if $filename == first-page-m {
+		$char: unquote('"\\E1D3"');
+	}
+	@if $filename == first-page {
+		$char: unquote('"\\E1D4"');
+	}
+	@if $filename == home-l {
+		$char: unquote('"\\E1D5"');
+	}
+	@if $filename == home-m-l {
+		$char: unquote('"\\E1D6"');
+	}
+	@if $filename == home-m {
+		$char: unquote('"\\E1D7"');
+	}
+	@if $filename == home {
+		$char: unquote('"\\E1D8"');
+	}
+	@if $filename == language-switcher-l {
+		$char: unquote('"\\E1D9"');
+	}
+	@if $filename == language-switcher-m-l {
+		$char: unquote('"\\E1DA"');
+	}
+	@if $filename == language-switcher-m {
+		$char: unquote('"\\E1DB"');
+	}
+	@if $filename == language-switcher {
+		$char: unquote('"\\E1DC"');
+	}
+	@if $filename == last-page-l {
+		$char: unquote('"\\E1DD"');
+	}
+	@if $filename == last-page-m-l {
+		$char: unquote('"\\E1DE"');
+	}
+	@if $filename == last-page-m {
+		$char: unquote('"\\E1DF"');
+	}
+	@if $filename == last-page {
+		$char: unquote('"\\E1E0"');
+	}
+	@if $filename == link-external-l {
+		$char: unquote('"\\E1E1"');
+	}
+	@if $filename == link-external-m-l {
+		$char: unquote('"\\E1E2"');
+	}
+	@if $filename == link-external-m {
+		$char: unquote('"\\E1E3"');
+	}
+	@if $filename == link-external {
+		$char: unquote('"\\E1E4"');
+	}
+	@if $filename == link-l {
+		$char: unquote('"\\E1E5"');
+	}
+	@if $filename == link-m-l {
+		$char: unquote('"\\E1E6"');
+	}
+	@if $filename == link-m {
+		$char: unquote('"\\E1E7"');
+	}
+	@if $filename == link {
+		$char: unquote('"\\E1E8"');
+	}
+	@if $filename == menu-l {
+		$char: unquote('"\\E1E9"');
+	}
+	@if $filename == menu-m-l {
+		$char: unquote('"\\E1EA"');
+	}
+	@if $filename == menu-m {
+		$char: unquote('"\\E1EB"');
+	}
+	@if $filename == menu {
+		$char: unquote('"\\E1EC"');
+	}
+	@if $filename == minus-circle-l {
+		$char: unquote('"\\E1ED"');
+	}
+	@if $filename == minus-circle-m-l {
+		$char: unquote('"\\E1EE"');
+	}
+	@if $filename == minus-circle-m {
+		$char: unquote('"\\E1EF"');
+	}
+	@if $filename == minus-circle {
+		$char: unquote('"\\E1F0"');
+	}
+	@if $filename == minus-l {
+		$char: unquote('"\\E1F1"');
+	}
+	@if $filename == minus-m-l {
+		$char: unquote('"\\E1F2"');
+	}
+	@if $filename == minus-m {
+		$char: unquote('"\\E1F3"');
+	}
+	@if $filename == minus {
+		$char: unquote('"\\E1F4"');
+	}
+	@if $filename == more-filled-horizontal-l {
+		$char: unquote('"\\E1F5"');
+	}
+	@if $filename == more-filled-horizontal-m-l {
+		$char: unquote('"\\E1F6"');
+	}
+	@if $filename == more-filled-horizontal-m {
+		$char: unquote('"\\E1F7"');
+	}
+	@if $filename == more-filled-horizontal {
+		$char: unquote('"\\E1F8"');
+	}
+	@if $filename == more-filled-vertical-l {
+		$char: unquote('"\\E1F9"');
+	}
+	@if $filename == more-filled-vertical-m-l {
+		$char: unquote('"\\E1FA"');
+	}
+	@if $filename == more-filled-vertical-m {
+		$char: unquote('"\\E1FB"');
+	}
+	@if $filename == more-filled-vertical {
+		$char: unquote('"\\E1FC"');
+	}
+	@if $filename == more-horizontal-l {
+		$char: unquote('"\\E1FD"');
+	}
+	@if $filename == more-horizontal-m-l {
+		$char: unquote('"\\E1FE"');
+	}
+	@if $filename == more-horizontal-m {
+		$char: unquote('"\\E1FF"');
+	}
+	@if $filename == more-horizontal {
+		$char: unquote('"\\E200"');
+	}
+	@if $filename == more-vertical-l {
+		$char: unquote('"\\E201"');
+	}
+	@if $filename == more-vertical-m-l {
+		$char: unquote('"\\E202"');
+	}
+	@if $filename == more-vertical-m {
+		$char: unquote('"\\E203"');
+	}
+	@if $filename == more-vertical {
+		$char: unquote('"\\E204"');
+	}
+	@if $filename == plus-circle-l {
+		$char: unquote('"\\E205"');
+	}
+	@if $filename == plus-circle-m-l {
+		$char: unquote('"\\E206"');
+	}
+	@if $filename == plus-circle-m {
+		$char: unquote('"\\E207"');
+	}
+	@if $filename == plus-circle {
+		$char: unquote('"\\E208"');
+	}
+	@if $filename == plus-l {
+		$char: unquote('"\\E209"');
+	}
+	@if $filename == plus-m-l {
+		$char: unquote('"\\E20A"');
+	}
+	@if $filename == plus-m {
+		$char: unquote('"\\E20B"');
+	}
+	@if $filename == plus {
+		$char: unquote('"\\E20C"');
+	}
+	@if $filename == print-l {
+		$char: unquote('"\\E20D"');
+	}
+	@if $filename == print-m-l {
+		$char: unquote('"\\E20E"');
+	}
+	@if $filename == print-m {
+		$char: unquote('"\\E20F"');
+	}
+	@if $filename == print {
+		$char: unquote('"\\E210"');
+	}
+	@if $filename == profile-l {
+		$char: unquote('"\\E211"');
+	}
+	@if $filename == profile-m-l {
+		$char: unquote('"\\E212"');
+	}
+	@if $filename == profile-m {
+		$char: unquote('"\\E213"');
+	}
+	@if $filename == profile {
+		$char: unquote('"\\E214"');
+	}
+	@if $filename == refresh-l {
+		$char: unquote('"\\E215"');
+	}
+	@if $filename == refresh-m-l {
+		$char: unquote('"\\E216"');
+	}
+	@if $filename == refresh-m {
+		$char: unquote('"\\E217"');
+	}
+	@if $filename == refresh {
+		$char: unquote('"\\E218"');
+	}
+	@if $filename == reset-l {
+		$char: unquote('"\\E219"');
+	}
+	@if $filename == reset-m-l {
+		$char: unquote('"\\E21A"');
+	}
+	@if $filename == reset-m {
+		$char: unquote('"\\E21B"');
+	}
+	@if $filename == reset {
+		$char: unquote('"\\E21C"');
+	}
+	@if $filename == rotate-l {
+		$char: unquote('"\\E21D"');
+	}
+	@if $filename == rotate-m-l {
+		$char: unquote('"\\E21E"');
+	}
+	@if $filename == rotate-m {
+		$char: unquote('"\\E21F"');
+	}
+	@if $filename == rotate {
+		$char: unquote('"\\E220"');
+	}
+	@if $filename == save-l {
+		$char: unquote('"\\E221"');
+	}
+	@if $filename == save-m-l {
+		$char: unquote('"\\E222"');
+	}
+	@if $filename == save-m {
+		$char: unquote('"\\E223"');
+	}
+	@if $filename == save {
+		$char: unquote('"\\E224"');
+	}
+	@if $filename == search-l {
+		$char: unquote('"\\E225"');
+	}
+	@if $filename == search-m-l {
+		$char: unquote('"\\E226"');
+	}
+	@if $filename == search-m {
+		$char: unquote('"\\E227"');
+	}
+	@if $filename == search {
+		$char: unquote('"\\E228"');
+	}
+	@if $filename == settings-l {
+		$char: unquote('"\\E229"');
+	}
+	@if $filename == settings-m-l {
+		$char: unquote('"\\E22A"');
+	}
+	@if $filename == settings-m {
+		$char: unquote('"\\E22B"');
+	}
+	@if $filename == settings {
+		$char: unquote('"\\E22C"');
+	}
+	@if $filename == sort-ascending-l {
+		$char: unquote('"\\E22D"');
+	}
+	@if $filename == sort-ascending-m-l {
+		$char: unquote('"\\E22E"');
+	}
+	@if $filename == sort-ascending-m {
+		$char: unquote('"\\E22F"');
+	}
+	@if $filename == sort-ascending {
+		$char: unquote('"\\E230"');
+	}
+	@if $filename == sort-descending-l {
+		$char: unquote('"\\E231"');
+	}
+	@if $filename == sort-descending-m-l {
+		$char: unquote('"\\E232"');
+	}
+	@if $filename == sort-descending-m {
+		$char: unquote('"\\E233"');
+	}
+	@if $filename == sort-descending {
+		$char: unquote('"\\E234"');
+	}
+	@if $filename == sort-l {
+		$char: unquote('"\\E235"');
+	}
+	@if $filename == sort-m-l {
+		$char: unquote('"\\E236"');
+	}
+	@if $filename == sort-m {
+		$char: unquote('"\\E237"');
+	}
+	@if $filename == sort {
+		$char: unquote('"\\E238"');
+	}
+	@if $filename == tools-l {
+		$char: unquote('"\\E239"');
+	}
+	@if $filename == tools-m-l {
+		$char: unquote('"\\E23A"');
+	}
+	@if $filename == tools-m {
+		$char: unquote('"\\E23B"');
+	}
+	@if $filename == tools {
+		$char: unquote('"\\E23C"');
+	}
+	@if $filename == top-l {
+		$char: unquote('"\\E23D"');
+	}
+	@if $filename == top-m-l {
+		$char: unquote('"\\E23E"');
+	}
+	@if $filename == top-m {
+		$char: unquote('"\\E23F"');
+	}
+	@if $filename == top {
+		$char: unquote('"\\E240"');
+	}
+	@if $filename == upload-l {
+		$char: unquote('"\\E241"');
+	}
+	@if $filename == upload-m-l {
+		$char: unquote('"\\E242"');
+	}
+	@if $filename == upload-m {
+		$char: unquote('"\\E243"');
+	}
+	@if $filename == upload {
+		$char: unquote('"\\E244"');
+	}
+	@if $filename == view-l {
+		$char: unquote('"\\E245"');
+	}
+	@if $filename == view-m-l {
+		$char: unquote('"\\E246"');
+	}
+	@if $filename == view-m {
+		$char: unquote('"\\E247"');
+	}
+	@if $filename == view {
+		$char: unquote('"\\E248"');
+	}
+	@if $filename == zoom-in-l {
+		$char: unquote('"\\E249"');
+	}
+	@if $filename == zoom-in-m-l {
+		$char: unquote('"\\E24A"');
+	}
+	@if $filename == zoom-in-m {
+		$char: unquote('"\\E24B"');
+	}
+	@if $filename == zoom-in {
+		$char: unquote('"\\E24C"');
+	}
+	@if $filename == zoom-out-l {
+		$char: unquote('"\\E24D"');
+	}
+	@if $filename == zoom-out-m-l {
+		$char: unquote('"\\E24E"');
+	}
+	@if $filename == zoom-out-m {
+		$char: unquote('"\\E24F"');
+	}
+	@if $filename == zoom-out {
+		$char: unquote('"\\E250"');
+	}
+	@if $filename == alert-l {
+		$char: unquote('"\\E251"');
+	}
+	@if $filename == alert-m-l {
+		$char: unquote('"\\E252"');
+	}
+	@if $filename == alert-m {
+		$char: unquote('"\\E253"');
+	}
+	@if $filename == alert {
+		$char: unquote('"\\E254"');
+	}
+	@if $filename == arrow-down-l {
+		$char: unquote('"\\E255"');
+	}
+	@if $filename == arrow-down-m-l {
+		$char: unquote('"\\E256"');
+	}
+	@if $filename == arrow-down-m {
+		$char: unquote('"\\E257"');
+	}
+	@if $filename == arrow-down {
+		$char: unquote('"\\E258"');
+	}
+	@if $filename == arrow-left-l {
+		$char: unquote('"\\E259"');
+	}
+	@if $filename == arrow-left-m-l {
+		$char: unquote('"\\E25A"');
+	}
+	@if $filename == arrow-left-m {
+		$char: unquote('"\\E25B"');
+	}
+	@if $filename == arrow-left {
+		$char: unquote('"\\E25C"');
+	}
+	@if $filename == arrow-right-l {
+		$char: unquote('"\\E25D"');
+	}
+	@if $filename == arrow-right-m-l {
+		$char: unquote('"\\E25E"');
+	}
+	@if $filename == arrow-right-m {
+		$char: unquote('"\\E25F"');
+	}
+	@if $filename == arrow-right {
+		$char: unquote('"\\E260"');
+	}
+	@if $filename == arrow-up-l {
+		$char: unquote('"\\E261"');
+	}
+	@if $filename == arrow-up-m-l {
+		$char: unquote('"\\E262"');
+	}
+	@if $filename == arrow-up-m {
+		$char: unquote('"\\E263"');
+	}
+	@if $filename == arrow-up {
+		$char: unquote('"\\E264"');
+	}
+	@if $filename == box-l {
+		$char: unquote('"\\E265"');
+	}
+	@if $filename == box-m-l {
+		$char: unquote('"\\E266"');
+	}
+	@if $filename == box-m {
+		$char: unquote('"\\E267"');
+	}
+	@if $filename == box {
+		$char: unquote('"\\E268"');
+	}
+	@if $filename == calculator-l {
+		$char: unquote('"\\E269"');
+	}
+	@if $filename == calculator-m-l {
+		$char: unquote('"\\E26A"');
+	}
+	@if $filename == calculator-m {
+		$char: unquote('"\\E26B"');
+	}
+	@if $filename == calculator {
+		$char: unquote('"\\E26C"');
+	}
+	@if $filename == calendar-l {
+		$char: unquote('"\\E26D"');
+	}
+	@if $filename == calendar-m-l {
+		$char: unquote('"\\E26E"');
+	}
+	@if $filename == calendar-m {
+		$char: unquote('"\\E26F"');
+	}
+	@if $filename == calendar-new-l {
+		$char: unquote('"\\E270"');
+	}
+	@if $filename == calendar-new-m-l {
+		$char: unquote('"\\E271"');
+	}
+	@if $filename == calendar-new-m {
+		$char: unquote('"\\E272"');
+	}
+	@if $filename == calendar-new {
+		$char: unquote('"\\E273"');
+	}
+	@if $filename == calendar {
+		$char: unquote('"\\E274"');
+	}
+	@if $filename == camera-l {
+		$char: unquote('"\\E275"');
+	}
+	@if $filename == camera-m-l {
+		$char: unquote('"\\E276"');
+	}
+	@if $filename == camera-m {
+		$char: unquote('"\\E277"');
+	}
+	@if $filename == camera {
+		$char: unquote('"\\E278"');
+	}
+	@if $filename == caret-circle-down-l {
+		$char: unquote('"\\E279"');
+	}
+	@if $filename == caret-circle-down-m-l {
+		$char: unquote('"\\E27A"');
+	}
+	@if $filename == caret-circle-down-m {
+		$char: unquote('"\\E27B"');
+	}
+	@if $filename == caret-circle-down {
+		$char: unquote('"\\E27C"');
+	}
+	@if $filename == caret-circle-left-l {
+		$char: unquote('"\\E27D"');
+	}
+	@if $filename == caret-circle-left-m-l {
+		$char: unquote('"\\E27E"');
+	}
+	@if $filename == caret-circle-left-m {
+		$char: unquote('"\\E27F"');
+	}
+	@if $filename == caret-circle-left {
+		$char: unquote('"\\E280"');
+	}
+	@if $filename == caret-circle-right-l {
+		$char: unquote('"\\E281"');
+	}
+	@if $filename == caret-circle-right-m-l {
+		$char: unquote('"\\E282"');
+	}
+	@if $filename == caret-circle-right-m {
+		$char: unquote('"\\E283"');
+	}
+	@if $filename == caret-circle-right {
+		$char: unquote('"\\E284"');
+	}
+	@if $filename == caret-circle-up-l {
+		$char: unquote('"\\E285"');
+	}
+	@if $filename == caret-circle-up-m-l {
+		$char: unquote('"\\E286"');
+	}
+	@if $filename == caret-circle-up-m {
+		$char: unquote('"\\E287"');
+	}
+	@if $filename == caret-circle-up {
+		$char: unquote('"\\E288"');
+	}
+	@if $filename == caret-down-fill-l {
+		$char: unquote('"\\E289"');
+	}
+	@if $filename == caret-down-fill-m-l {
+		$char: unquote('"\\E28A"');
+	}
+	@if $filename == caret-down-fill-m {
+		$char: unquote('"\\E28B"');
+	}
+	@if $filename == caret-down-fill {
+		$char: unquote('"\\E28C"');
+	}
+	@if $filename == caret-down-l {
+		$char: unquote('"\\E28D"');
+	}
+	@if $filename == caret-down-m-l {
+		$char: unquote('"\\E28E"');
+	}
+	@if $filename == caret-down-m {
+		$char: unquote('"\\E28F"');
+	}
+	@if $filename == caret-down {
+		$char: unquote('"\\E290"');
+	}
+	@if $filename == caret-left-fill-l {
+		$char: unquote('"\\E291"');
+	}
+	@if $filename == caret-left-fill-m-l {
+		$char: unquote('"\\E292"');
+	}
+	@if $filename == caret-left-fill-m {
+		$char: unquote('"\\E293"');
+	}
+	@if $filename == caret-left-fill {
+		$char: unquote('"\\E294"');
+	}
+	@if $filename == caret-left-l {
+		$char: unquote('"\\E295"');
+	}
+	@if $filename == caret-left-m-l {
+		$char: unquote('"\\E296"');
+	}
+	@if $filename == caret-left-m {
+		$char: unquote('"\\E297"');
+	}
+	@if $filename == caret-left {
+		$char: unquote('"\\E298"');
+	}
+	@if $filename == caret-right-fill-l {
+		$char: unquote('"\\E299"');
+	}
+	@if $filename == caret-right-fill-m-l {
+		$char: unquote('"\\E29A"');
+	}
+	@if $filename == caret-right-fill-m {
+		$char: unquote('"\\E29B"');
+	}
+	@if $filename == caret-right-fill {
+		$char: unquote('"\\E29C"');
+	}
+	@if $filename == caret-right-l {
+		$char: unquote('"\\E29D"');
+	}
+	@if $filename == caret-right-m-l {
+		$char: unquote('"\\E29E"');
+	}
+	@if $filename == caret-right-m {
+		$char: unquote('"\\E29F"');
+	}
+	@if $filename == caret-right {
+		$char: unquote('"\\E2A0"');
+	}
+	@if $filename == caret-select-l {
+		$char: unquote('"\\E2A1"');
+	}
+	@if $filename == caret-select-m-l {
+		$char: unquote('"\\E2A2"');
+	}
+	@if $filename == caret-select-m {
+		$char: unquote('"\\E2A3"');
+	}
+	@if $filename == caret-select {
+		$char: unquote('"\\E2A4"');
+	}
+	@if $filename == caret-up-fill-l {
+		$char: unquote('"\\E2A5"');
+	}
+	@if $filename == caret-up-fill-m-l {
+		$char: unquote('"\\E2A6"');
+	}
+	@if $filename == caret-up-fill-m {
+		$char: unquote('"\\E2A7"');
+	}
+	@if $filename == caret-up-fill {
+		$char: unquote('"\\E2A8"');
+	}
+	@if $filename == caret-up-l {
+		$char: unquote('"\\E2A9"');
+	}
+	@if $filename == caret-up-m-l {
+		$char: unquote('"\\E2AA"');
+	}
+	@if $filename == caret-up-m {
+		$char: unquote('"\\E2AB"');
+	}
+	@if $filename == caret-up {
+		$char: unquote('"\\E2AC"');
+	}
+	@if $filename == cart-l {
+		$char: unquote('"\\E2AD"');
+	}
+	@if $filename == cart-m-l {
+		$char: unquote('"\\E2AE"');
+	}
+	@if $filename == cart-m {
+		$char: unquote('"\\E2AF"');
+	}
+	@if $filename == cart {
+		$char: unquote('"\\E2B0"');
+	}
+	@if $filename == check-box-l {
+		$char: unquote('"\\E2B1"');
+	}
+	@if $filename == check-box-m-l {
+		$char: unquote('"\\E2B2"');
+	}
+	@if $filename == check-box-m {
+		$char: unquote('"\\E2B3"');
+	}
+	@if $filename == check-box {
+		$char: unquote('"\\E2B4"');
+	}
+	@if $filename == check-circle-l {
+		$char: unquote('"\\E2B5"');
+	}
+	@if $filename == check-circle-m-l {
+		$char: unquote('"\\E2B6"');
+	}
+	@if $filename == check-circle-m {
+		$char: unquote('"\\E2B7"');
+	}
+	@if $filename == check-circle {
+		$char: unquote('"\\E2B8"');
+	}
+	@if $filename == check-l {
+		$char: unquote('"\\E2B9"');
+	}
+	@if $filename == check-m-l {
+		$char: unquote('"\\E2BA"');
+	}
+	@if $filename == check-m {
+		$char: unquote('"\\E2BB"');
+	}
+	@if $filename == check {
+		$char: unquote('"\\E2BC"');
+	}
+	@if $filename == circle-fill-l {
+		$char: unquote('"\\E2BD"');
+	}
+	@if $filename == circle-fill-m-l {
+		$char: unquote('"\\E2BE"');
+	}
+	@if $filename == circle-fill-m {
+		$char: unquote('"\\E2BF"');
+	}
+	@if $filename == circle-fill {
+		$char: unquote('"\\E2C0"');
+	}
+	@if $filename == circle-l {
+		$char: unquote('"\\E2C1"');
+	}
+	@if $filename == circle-m-l {
+		$char: unquote('"\\E2C2"');
+	}
+	@if $filename == circle-m {
+		$char: unquote('"\\E2C3"');
+	}
+	@if $filename == circle {
+		$char: unquote('"\\E2C4"');
+	}
+	@if $filename == clock-l {
+		$char: unquote('"\\E2C5"');
+	}
+	@if $filename == clock-m-l {
+		$char: unquote('"\\E2C6"');
+	}
+	@if $filename == clock-m {
+		$char: unquote('"\\E2C7"');
+	}
+	@if $filename == clock {
+		$char: unquote('"\\E2C8"');
+	}
+	@if $filename == cloud-l {
+		$char: unquote('"\\E2C9"');
+	}
+	@if $filename == cloud-m-l {
+		$char: unquote('"\\E2CA"');
+	}
+	@if $filename == cloud-m {
+		$char: unquote('"\\E2CB"');
+	}
+	@if $filename == cloud {
+		$char: unquote('"\\E2CC"');
+	}
+	@if $filename == code-l {
+		$char: unquote('"\\E2CD"');
+	}
+	@if $filename == code-m-l {
+		$char: unquote('"\\E2CE"');
+	}
+	@if $filename == code-m {
+		$char: unquote('"\\E2CF"');
+	}
+	@if $filename == code {
+		$char: unquote('"\\E2D0"');
+	}
+	@if $filename == currency-l {
+		$char: unquote('"\\E2D1"');
+	}
+	@if $filename == currency-m-l {
+		$char: unquote('"\\E2D2"');
+	}
+	@if $filename == currency-m {
+		$char: unquote('"\\E2D3"');
+	}
+	@if $filename == currency {
+		$char: unquote('"\\E2D4"');
+	}
+	@if $filename == desktop-l {
+		$char: unquote('"\\E2D5"');
+	}
+	@if $filename == desktop-m-l {
+		$char: unquote('"\\E2D6"');
+	}
+	@if $filename == desktop-m {
+		$char: unquote('"\\E2D7"');
+	}
+	@if $filename == desktop {
+		$char: unquote('"\\E2D8"');
+	}
+	@if $filename == help-l {
+		$char: unquote('"\\E2D9"');
+	}
+	@if $filename == help-m-l {
+		$char: unquote('"\\E2DA"');
+	}
+	@if $filename == help-m {
+		$char: unquote('"\\E2DB"');
+	}
+	@if $filename == help {
+		$char: unquote('"\\E2DC"');
+	}
+	@if $filename == info-l {
+		$char: unquote('"\\E2DD"');
+	}
+	@if $filename == info-m-l {
+		$char: unquote('"\\E2DE"');
+	}
+	@if $filename == info-m {
+		$char: unquote('"\\E2DF"');
+	}
+	@if $filename == info {
+		$char: unquote('"\\E2E0"');
+	}
+	@if $filename == locked-l {
+		$char: unquote('"\\E2E1"');
+	}
+	@if $filename == locked-m-l {
+		$char: unquote('"\\E2E2"');
+	}
+	@if $filename == locked-m {
+		$char: unquote('"\\E2E3"');
+	}
+	@if $filename == locked {
+		$char: unquote('"\\E2E4"');
+	}
+	@if $filename == m-dash-l {
+		$char: unquote('"\\E2E5"');
+	}
+	@if $filename == m-dash-m-l {
+		$char: unquote('"\\E2E6"');
+	}
+	@if $filename == m-dash-m {
+		$char: unquote('"\\E2E7"');
+	}
+	@if $filename == m-dash {
+		$char: unquote('"\\E2E8"');
+	}
+	@if $filename == map-l {
+		$char: unquote('"\\E2E9"');
+	}
+	@if $filename == map-m-l {
+		$char: unquote('"\\E2EA"');
+	}
+	@if $filename == map-m {
+		$char: unquote('"\\E2EB"');
+	}
+	@if $filename == map {
+		$char: unquote('"\\E2EC"');
+	}
+	@if $filename == media-library-l {
+		$char: unquote('"\\E2ED"');
+	}
+	@if $filename == media-library-m-l {
+		$char: unquote('"\\E2EE"');
+	}
+	@if $filename == media-library-m {
+		$char: unquote('"\\E2EF"');
+	}
+	@if $filename == media-library {
+		$char: unquote('"\\E2F0"');
+	}
+	@if $filename == mobile-l {
+		$char: unquote('"\\E2F1"');
+	}
+	@if $filename == mobile-m-l {
+		$char: unquote('"\\E2F2"');
+	}
+	@if $filename == mobile-m {
+		$char: unquote('"\\E2F3"');
+	}
+	@if $filename == mobile {
+		$char: unquote('"\\E2F4"');
+	}
+	@if $filename == n-dash-l {
+		$char: unquote('"\\E2F5"');
+	}
+	@if $filename == n-dash-m-l {
+		$char: unquote('"\\E2F6"');
+	}
+	@if $filename == n-dash-m {
+		$char: unquote('"\\E2F7"');
+	}
+	@if $filename == n-dash {
+		$char: unquote('"\\E2F8"');
+	}
+	@if $filename == new-l {
+		$char: unquote('"\\E2F9"');
+	}
+	@if $filename == new-m-l {
+		$char: unquote('"\\E2FA"');
+	}
+	@if $filename == new-m {
+		$char: unquote('"\\E2FB"');
+	}
+	@if $filename == new {
+		$char: unquote('"\\E2FC"');
+	}
+	@if $filename == payment-l {
+		$char: unquote('"\\E2FD"');
+	}
+	@if $filename == payment-m-l {
+		$char: unquote('"\\E2FE"');
+	}
+	@if $filename == payment-m {
+		$char: unquote('"\\E2FF"');
+	}
+	@if $filename == payment {
+		$char: unquote('"\\E300"');
+	}
+	@if $filename == product-l {
+		$char: unquote('"\\E301"');
+	}
+	@if $filename == product-m-l {
+		$char: unquote('"\\E302"');
+	}
+	@if $filename == product-m {
+		$char: unquote('"\\E303"');
+	}
+	@if $filename == product {
+		$char: unquote('"\\E304"');
+	}
+	@if $filename == recommended-l {
+		$char: unquote('"\\E305"');
+	}
+	@if $filename == recommended-m-l {
+		$char: unquote('"\\E306"');
+	}
+	@if $filename == recommended-m {
+		$char: unquote('"\\E307"');
+	}
+	@if $filename == recommended {
+		$char: unquote('"\\E308"');
+	}
+	@if $filename == tablet-l {
+		$char: unquote('"\\E309"');
+	}
+	@if $filename == tablet-m-l {
+		$char: unquote('"\\E30A"');
+	}
+	@if $filename == tablet-m {
+		$char: unquote('"\\E30B"');
+	}
+	@if $filename == tablet {
+		$char: unquote('"\\E30C"');
+	}
+	@if $filename == tag-l {
+		$char: unquote('"\\E30D"');
+	}
+	@if $filename == tag-m-l {
+		$char: unquote('"\\E30E"');
+	}
+	@if $filename == tag-m {
+		$char: unquote('"\\E30F"');
+	}
+	@if $filename == tag {
+		$char: unquote('"\\E310"');
+	}
+	@if $filename == transfer-l {
+		$char: unquote('"\\E311"');
+	}
+	@if $filename == transfer-m-l {
+		$char: unquote('"\\E312"');
+	}
+	@if $filename == transfer-m {
+		$char: unquote('"\\E313"');
+	}
+	@if $filename == transfer {
+		$char: unquote('"\\E314"');
+	}
+	@if $filename == trash-l {
+		$char: unquote('"\\E315"');
+	}
+	@if $filename == trash-m-l {
+		$char: unquote('"\\E316"');
+	}
+	@if $filename == trash-m {
+		$char: unquote('"\\E317"');
+	}
+	@if $filename == trash {
+		$char: unquote('"\\E318"');
+	}
+	@if $filename == travel-l {
+		$char: unquote('"\\E319"');
+	}
+	@if $filename == travel-m-l {
+		$char: unquote('"\\E31A"');
+	}
+	@if $filename == travel-m {
+		$char: unquote('"\\E31B"');
+	}
+	@if $filename == travel {
+		$char: unquote('"\\E31C"');
+	}
+	@if $filename == unlocked-l {
+		$char: unquote('"\\E31D"');
+	}
+	@if $filename == unlocked-m-l {
+		$char: unquote('"\\E31E"');
+	}
+	@if $filename == unlocked-m {
+		$char: unquote('"\\E31F"');
+	}
+	@if $filename == unlocked {
+		$char: unquote('"\\E320"');
+	}
+	@if $filename == wiki-l {
+		$char: unquote('"\\E321"');
+	}
+	@if $filename == wiki-m-l {
+		$char: unquote('"\\E322"');
+	}
+	@if $filename == wiki-m {
+		$char: unquote('"\\E323"');
+	}
+	@if $filename == wiki {
+		$char: unquote('"\\E324"');
+	}
+	@if $filename == wireless-l {
+		$char: unquote('"\\E325"');
+	}
+	@if $filename == wireless-m-l {
+		$char: unquote('"\\E326"');
+	}
+	@if $filename == wireless-m {
+		$char: unquote('"\\E327"');
+	}
+	@if $filename == wireless {
+		$char: unquote('"\\E328"');
+	}
+
+	@return $char;
+}
+
+@mixin ds-icon($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %ds-icon;
+		} @else {
+			@include ds-icon-styles;
+		}
+		content: ds-icon-char($filename);
+	}
+}
+
+.ds-icon-area-chart-l {
+	@include ds-icon(area-chart-l);
+}
+.ds-icon-area-chart-m-l {
+	@include ds-icon(area-chart-m-l);
+}
+.ds-icon-area-chart-m {
+	@include ds-icon(area-chart-m);
+}
+.ds-icon-area-chart {
+	@include ds-icon(area-chart);
+}
+.ds-icon-bar-chart-l {
+	@include ds-icon(bar-chart-l);
+}
+.ds-icon-bar-chart-m-l {
+	@include ds-icon(bar-chart-m-l);
+}
+.ds-icon-bar-chart-m {
+	@include ds-icon(bar-chart-m);
+}
+.ds-icon-bar-chart {
+	@include ds-icon(bar-chart);
+}
+.ds-icon-line-chart-l {
+	@include ds-icon(line-chart-l);
+}
+.ds-icon-line-chart-m-l {
+	@include ds-icon(line-chart-m-l);
+}
+.ds-icon-line-chart-m {
+	@include ds-icon(line-chart-m);
+}
+.ds-icon-line-chart {
+	@include ds-icon(line-chart);
+}
+.ds-icon-pie-chart-l {
+	@include ds-icon(pie-chart-l);
+}
+.ds-icon-pie-chart-m-l {
+	@include ds-icon(pie-chart-m-l);
+}
+.ds-icon-pie-chart-m {
+	@include ds-icon(pie-chart-m);
+}
+.ds-icon-pie-chart {
+	@include ds-icon(pie-chart);
+}
+.ds-icon-tree-map-l {
+	@include ds-icon(tree-map-l);
+}
+.ds-icon-tree-map-m-l {
+	@include ds-icon(tree-map-m-l);
+}
+.ds-icon-tree-map-m {
+	@include ds-icon(tree-map-m);
+}
+.ds-icon-tree-map {
+	@include ds-icon(tree-map);
+}
+.ds-icon-align-center-l {
+	@include ds-icon(align-center-l);
+}
+.ds-icon-align-center-m-l {
+	@include ds-icon(align-center-m-l);
+}
+.ds-icon-align-center-m {
+	@include ds-icon(align-center-m);
+}
+.ds-icon-align-center {
+	@include ds-icon(align-center);
+}
+.ds-icon-align-justify-l {
+	@include ds-icon(align-justify-l);
+}
+.ds-icon-align-justify-m-l {
+	@include ds-icon(align-justify-m-l);
+}
+.ds-icon-align-justify-m {
+	@include ds-icon(align-justify-m);
+}
+.ds-icon-align-justify {
+	@include ds-icon(align-justify);
+}
+.ds-icon-align-left-l {
+	@include ds-icon(align-left-l);
+}
+.ds-icon-align-left-m-l {
+	@include ds-icon(align-left-m-l);
+}
+.ds-icon-align-left-m {
+	@include ds-icon(align-left-m);
+}
+.ds-icon-align-left {
+	@include ds-icon(align-left);
+}
+.ds-icon-align-right-l {
+	@include ds-icon(align-right-l);
+}
+.ds-icon-align-right-m-l {
+	@include ds-icon(align-right-m-l);
+}
+.ds-icon-align-right-m {
+	@include ds-icon(align-right-m);
+}
+.ds-icon-align-right {
+	@include ds-icon(align-right);
+}
+.ds-icon-clear-formatting-l {
+	@include ds-icon(clear-formatting-l);
+}
+.ds-icon-clear-formatting-m-l {
+	@include ds-icon(clear-formatting-m-l);
+}
+.ds-icon-clear-formatting-m {
+	@include ds-icon(clear-formatting-m);
+}
+.ds-icon-clear-formatting {
+	@include ds-icon(clear-formatting);
+}
+.ds-icon-copy-l {
+	@include ds-icon(copy-l);
+}
+.ds-icon-copy-m-l {
+	@include ds-icon(copy-m-l);
+}
+.ds-icon-copy-m {
+	@include ds-icon(copy-m);
+}
+.ds-icon-copy {
+	@include ds-icon(copy);
+}
+.ds-icon-cut-l {
+	@include ds-icon(cut-l);
+}
+.ds-icon-cut-m-l {
+	@include ds-icon(cut-m-l);
+}
+.ds-icon-cut-m {
+	@include ds-icon(cut-m);
+}
+.ds-icon-cut {
+	@include ds-icon(cut);
+}
+.ds-icon-fill-color-l {
+	@include ds-icon(fill-color-l);
+}
+.ds-icon-fill-color-m-l {
+	@include ds-icon(fill-color-m-l);
+}
+.ds-icon-fill-color-m {
+	@include ds-icon(fill-color-m);
+}
+.ds-icon-fill-color {
+	@include ds-icon(fill-color);
+}
+.ds-icon-indent-left-l {
+	@include ds-icon(indent-left-l);
+}
+.ds-icon-indent-left-m-l {
+	@include ds-icon(indent-left-m-l);
+}
+.ds-icon-indent-left-m {
+	@include ds-icon(indent-left-m);
+}
+.ds-icon-indent-left {
+	@include ds-icon(indent-left);
+}
+.ds-icon-indent-right-l {
+	@include ds-icon(indent-right-l);
+}
+.ds-icon-indent-right-m-l {
+	@include ds-icon(indent-right-m-l);
+}
+.ds-icon-indent-right-m {
+	@include ds-icon(indent-right-m);
+}
+.ds-icon-indent-right {
+	@include ds-icon(indent-right);
+}
+.ds-icon-insert-l {
+	@include ds-icon(insert-l);
+}
+.ds-icon-insert-m-l {
+	@include ds-icon(insert-m-l);
+}
+.ds-icon-insert-m {
+	@include ds-icon(insert-m);
+}
+.ds-icon-insert {
+	@include ds-icon(insert);
+}
+.ds-icon-list-ordered-l {
+	@include ds-icon(list-ordered-l);
+}
+.ds-icon-list-ordered-m-l {
+	@include ds-icon(list-ordered-m-l);
+}
+.ds-icon-list-ordered-m {
+	@include ds-icon(list-ordered-m);
+}
+.ds-icon-list-ordered {
+	@include ds-icon(list-ordered);
+}
+.ds-icon-list-unordered-l {
+	@include ds-icon(list-unordered-l);
+}
+.ds-icon-list-unordered-m-l {
+	@include ds-icon(list-unordered-m-l);
+}
+.ds-icon-list-unordered-m {
+	@include ds-icon(list-unordered-m);
+}
+.ds-icon-list-unordered {
+	@include ds-icon(list-unordered);
+}
+.ds-icon-paste-l {
+	@include ds-icon(paste-l);
+}
+.ds-icon-paste-m-l {
+	@include ds-icon(paste-m-l);
+}
+.ds-icon-paste-m {
+	@include ds-icon(paste-m);
+}
+.ds-icon-paste {
+	@include ds-icon(paste);
+}
+.ds-icon-type-bold-l {
+	@include ds-icon(type-bold-l);
+}
+.ds-icon-type-bold-m-l {
+	@include ds-icon(type-bold-m-l);
+}
+.ds-icon-type-bold-m {
+	@include ds-icon(type-bold-m);
+}
+.ds-icon-type-bold {
+	@include ds-icon(type-bold);
+}
+.ds-icon-type-italic-l {
+	@include ds-icon(type-italic-l);
+}
+.ds-icon-type-italic-m-l {
+	@include ds-icon(type-italic-m-l);
+}
+.ds-icon-type-italic-m {
+	@include ds-icon(type-italic-m);
+}
+.ds-icon-type-italic {
+	@include ds-icon(type-italic);
+}
+.ds-icon-type-size-l {
+	@include ds-icon(type-size-l);
+}
+.ds-icon-type-size-m-l {
+	@include ds-icon(type-size-m-l);
+}
+.ds-icon-type-size-m {
+	@include ds-icon(type-size-m);
+}
+.ds-icon-type-size {
+	@include ds-icon(type-size);
+}
+.ds-icon-type-underline-l {
+	@include ds-icon(type-underline-l);
+}
+.ds-icon-type-underline-m-l {
+	@include ds-icon(type-underline-m-l);
+}
+.ds-icon-type-underline-m {
+	@include ds-icon(type-underline-m);
+}
+.ds-icon-type-underline {
+	@include ds-icon(type-underline);
+}
+.ds-icon-add-folder-l {
+	@include ds-icon(add-folder-l);
+}
+.ds-icon-add-folder-m-l {
+	@include ds-icon(add-folder-m-l);
+}
+.ds-icon-add-folder-m {
+	@include ds-icon(add-folder-m);
+}
+.ds-icon-add-folder {
+	@include ds-icon(add-folder);
+}
+.ds-icon-add-page-l {
+	@include ds-icon(add-page-l);
+}
+.ds-icon-add-page-m-l {
+	@include ds-icon(add-page-m-l);
+}
+.ds-icon-add-page-m {
+	@include ds-icon(add-page-m);
+}
+.ds-icon-add-page {
+	@include ds-icon(add-page);
+}
+.ds-icon-file-audio-l {
+	@include ds-icon(file-audio-l);
+}
+.ds-icon-file-audio-m-l {
+	@include ds-icon(file-audio-m-l);
+}
+.ds-icon-file-audio-m {
+	@include ds-icon(file-audio-m);
+}
+.ds-icon-file-audio {
+	@include ds-icon(file-audio);
+}
+.ds-icon-file-check-l {
+	@include ds-icon(file-check-l);
+}
+.ds-icon-file-check-m-l {
+	@include ds-icon(file-check-m-l);
+}
+.ds-icon-file-check-m {
+	@include ds-icon(file-check-m);
+}
+.ds-icon-file-check {
+	@include ds-icon(file-check);
+}
+.ds-icon-file-code-l {
+	@include ds-icon(file-code-l);
+}
+.ds-icon-file-code-m-l {
+	@include ds-icon(file-code-m-l);
+}
+.ds-icon-file-code-m {
+	@include ds-icon(file-code-m);
+}
+.ds-icon-file-code {
+	@include ds-icon(file-code);
+}
+.ds-icon-file-doc-l {
+	@include ds-icon(file-doc-l);
+}
+.ds-icon-file-doc-m-l {
+	@include ds-icon(file-doc-m-l);
+}
+.ds-icon-file-doc-m {
+	@include ds-icon(file-doc-m);
+}
+.ds-icon-file-doc {
+	@include ds-icon(file-doc);
+}
+.ds-icon-file-image-l {
+	@include ds-icon(file-image-l);
+}
+.ds-icon-file-image-m-l {
+	@include ds-icon(file-image-m-l);
+}
+.ds-icon-file-image-m {
+	@include ds-icon(file-image-m);
+}
+.ds-icon-file-image {
+	@include ds-icon(file-image);
+}
+.ds-icon-file-jpg-l {
+	@include ds-icon(file-jpg-l);
+}
+.ds-icon-file-jpg-m-l {
+	@include ds-icon(file-jpg-m-l);
+}
+.ds-icon-file-jpg-m {
+	@include ds-icon(file-jpg-m);
+}
+.ds-icon-file-jpg {
+	@include ds-icon(file-jpg);
+}
+.ds-icon-file-l {
+	@include ds-icon(file-l);
+}
+.ds-icon-file-m-l {
+	@include ds-icon(file-m-l);
+}
+.ds-icon-file-m {
+	@include ds-icon(file-m);
+}
+.ds-icon-file-pdf-l {
+	@include ds-icon(file-pdf-l);
+}
+.ds-icon-file-pdf-m-l {
+	@include ds-icon(file-pdf-m-l);
+}
+.ds-icon-file-pdf-m {
+	@include ds-icon(file-pdf-m);
+}
+.ds-icon-file-pdf {
+	@include ds-icon(file-pdf);
+}
+.ds-icon-file-ppt-l {
+	@include ds-icon(file-ppt-l);
+}
+.ds-icon-file-ppt-m-l {
+	@include ds-icon(file-ppt-m-l);
+}
+.ds-icon-file-ppt-m {
+	@include ds-icon(file-ppt-m);
+}
+.ds-icon-file-ppt {
+	@include ds-icon(file-ppt);
+}
+.ds-icon-file-sketch-l {
+	@include ds-icon(file-sketch-l);
+}
+.ds-icon-file-sketch-m-l {
+	@include ds-icon(file-sketch-m-l);
+}
+.ds-icon-file-sketch-m {
+	@include ds-icon(file-sketch-m);
+}
+.ds-icon-file-sketch {
+	@include ds-icon(file-sketch);
+}
+.ds-icon-file-text-l {
+	@include ds-icon(file-text-l);
+}
+.ds-icon-file-text-m-l {
+	@include ds-icon(file-text-m-l);
+}
+.ds-icon-file-text-m {
+	@include ds-icon(file-text-m);
+}
+.ds-icon-file-text {
+	@include ds-icon(file-text);
+}
+.ds-icon-file-video-l {
+	@include ds-icon(file-video-l);
+}
+.ds-icon-file-video-m-l {
+	@include ds-icon(file-video-m-l);
+}
+.ds-icon-file-video-m {
+	@include ds-icon(file-video-m);
+}
+.ds-icon-file-video {
+	@include ds-icon(file-video);
+}
+.ds-icon-file-xls-l {
+	@include ds-icon(file-xls-l);
+}
+.ds-icon-file-xls-m-l {
+	@include ds-icon(file-xls-m-l);
+}
+.ds-icon-file-xls-m {
+	@include ds-icon(file-xls-m);
+}
+.ds-icon-file-xls {
+	@include ds-icon(file-xls);
+}
+.ds-icon-file-zip-l {
+	@include ds-icon(file-zip-l);
+}
+.ds-icon-file-zip-m-l {
+	@include ds-icon(file-zip-m-l);
+}
+.ds-icon-file-zip-m {
+	@include ds-icon(file-zip-m);
+}
+.ds-icon-file-zip {
+	@include ds-icon(file-zip);
+}
+.ds-icon-file {
+	@include ds-icon(file);
+}
+.ds-icon-folder-l {
+	@include ds-icon(folder-l);
+}
+.ds-icon-folder-m-l {
+	@include ds-icon(folder-m-l);
+}
+.ds-icon-folder-m {
+	@include ds-icon(folder-m);
+}
+.ds-icon-folder {
+	@include ds-icon(folder);
+}
+.ds-icon-mic-off-fill-l {
+	@include ds-icon(mic-off-fill-l);
+}
+.ds-icon-mic-off-fill-m-l {
+	@include ds-icon(mic-off-fill-m-l);
+}
+.ds-icon-mic-off-fill-m {
+	@include ds-icon(mic-off-fill-m);
+}
+.ds-icon-mic-off-fill {
+	@include ds-icon(mic-off-fill);
+}
+.ds-icon-mic-off-l {
+	@include ds-icon(mic-off-l);
+}
+.ds-icon-mic-off-m-l {
+	@include ds-icon(mic-off-m-l);
+}
+.ds-icon-mic-off-m {
+	@include ds-icon(mic-off-m);
+}
+.ds-icon-mic-off {
+	@include ds-icon(mic-off);
+}
+.ds-icon-mic-on-fill-l {
+	@include ds-icon(mic-on-fill-l);
+}
+.ds-icon-mic-on-fill-m-l {
+	@include ds-icon(mic-on-fill-m-l);
+}
+.ds-icon-mic-on-fill-m {
+	@include ds-icon(mic-on-fill-m);
+}
+.ds-icon-mic-on-fill {
+	@include ds-icon(mic-on-fill);
+}
+.ds-icon-mic-on-l {
+	@include ds-icon(mic-on-l);
+}
+.ds-icon-mic-on-m-l {
+	@include ds-icon(mic-on-m-l);
+}
+.ds-icon-mic-on-m {
+	@include ds-icon(mic-on-m);
+}
+.ds-icon-mic-on {
+	@include ds-icon(mic-on);
+}
+.ds-icon-pause-fill-l {
+	@include ds-icon(pause-fill-l);
+}
+.ds-icon-pause-fill-m-l {
+	@include ds-icon(pause-fill-m-l);
+}
+.ds-icon-pause-fill-m {
+	@include ds-icon(pause-fill-m);
+}
+.ds-icon-pause-fill {
+	@include ds-icon(pause-fill);
+}
+.ds-icon-pause-l {
+	@include ds-icon(pause-l);
+}
+.ds-icon-pause-m-l {
+	@include ds-icon(pause-m-l);
+}
+.ds-icon-pause-m {
+	@include ds-icon(pause-m);
+}
+.ds-icon-pause {
+	@include ds-icon(pause);
+}
+.ds-icon-play-fill-l {
+	@include ds-icon(play-fill-l);
+}
+.ds-icon-play-fill-m-l {
+	@include ds-icon(play-fill-m-l);
+}
+.ds-icon-play-fill-m {
+	@include ds-icon(play-fill-m);
+}
+.ds-icon-play-fill {
+	@include ds-icon(play-fill);
+}
+.ds-icon-play-l {
+	@include ds-icon(play-l);
+}
+.ds-icon-play-m-l {
+	@include ds-icon(play-m-l);
+}
+.ds-icon-play-m {
+	@include ds-icon(play-m);
+}
+.ds-icon-play {
+	@include ds-icon(play);
+}
+.ds-icon-stop-fill-l {
+	@include ds-icon(stop-fill-l);
+}
+.ds-icon-stop-fill-m-l {
+	@include ds-icon(stop-fill-m-l);
+}
+.ds-icon-stop-fill-m {
+	@include ds-icon(stop-fill-m);
+}
+.ds-icon-stop-fill {
+	@include ds-icon(stop-fill);
+}
+.ds-icon-stop-l {
+	@include ds-icon(stop-l);
+}
+.ds-icon-stop-m-l {
+	@include ds-icon(stop-m-l);
+}
+.ds-icon-stop-m {
+	@include ds-icon(stop-m);
+}
+.ds-icon-stop {
+	@include ds-icon(stop);
+}
+.ds-icon-video-fill-l {
+	@include ds-icon(video-fill-l);
+}
+.ds-icon-video-fill-m-l {
+	@include ds-icon(video-fill-m-l);
+}
+.ds-icon-video-fill-m {
+	@include ds-icon(video-fill-m);
+}
+.ds-icon-video-fill {
+	@include ds-icon(video-fill);
+}
+.ds-icon-video-l {
+	@include ds-icon(video-l);
+}
+.ds-icon-video-m-l {
+	@include ds-icon(video-m-l);
+}
+.ds-icon-video-m {
+	@include ds-icon(video-m);
+}
+.ds-icon-video {
+	@include ds-icon(video);
+}
+.ds-icon-volume-0-fill-l {
+	@include ds-icon(volume-0-fill-l);
+}
+.ds-icon-volume-0-fill-m-l {
+	@include ds-icon(volume-0-fill-m-l);
+}
+.ds-icon-volume-0-fill-m {
+	@include ds-icon(volume-0-fill-m);
+}
+.ds-icon-volume-0-fill {
+	@include ds-icon(volume-0-fill);
+}
+.ds-icon-volume-0-l {
+	@include ds-icon(volume-0-l);
+}
+.ds-icon-volume-0-m-l {
+	@include ds-icon(volume-0-m-l);
+}
+.ds-icon-volume-0-m {
+	@include ds-icon(volume-0-m);
+}
+.ds-icon-volume-0 {
+	@include ds-icon(volume-0);
+}
+.ds-icon-volume-1-fill-l {
+	@include ds-icon(volume-1-fill-l);
+}
+.ds-icon-volume-1-fill-m-l {
+	@include ds-icon(volume-1-fill-m-l);
+}
+.ds-icon-volume-1-fill-m {
+	@include ds-icon(volume-1-fill-m);
+}
+.ds-icon-volume-1-fill {
+	@include ds-icon(volume-1-fill);
+}
+.ds-icon-volume-1-l {
+	@include ds-icon(volume-1-l);
+}
+.ds-icon-volume-1-m-l {
+	@include ds-icon(volume-1-m-l);
+}
+.ds-icon-volume-1-m {
+	@include ds-icon(volume-1-m);
+}
+.ds-icon-volume-1 {
+	@include ds-icon(volume-1);
+}
+.ds-icon-volume-2-fill-l {
+	@include ds-icon(volume-2-fill-l);
+}
+.ds-icon-volume-2-fill-m-l {
+	@include ds-icon(volume-2-fill-m-l);
+}
+.ds-icon-volume-2-fill-m {
+	@include ds-icon(volume-2-fill-m);
+}
+.ds-icon-volume-2-fill {
+	@include ds-icon(volume-2-fill);
+}
+.ds-icon-volume-2-l {
+	@include ds-icon(volume-2-l);
+}
+.ds-icon-volume-2-m-l {
+	@include ds-icon(volume-2-m-l);
+}
+.ds-icon-volume-2-m {
+	@include ds-icon(volume-2-m);
+}
+.ds-icon-volume-2 {
+	@include ds-icon(volume-2);
+}
+.ds-icon-volume-3-fill-l {
+	@include ds-icon(volume-3-fill-l);
+}
+.ds-icon-volume-3-fill-m-l {
+	@include ds-icon(volume-3-fill-m-l);
+}
+.ds-icon-volume-3-fill-m {
+	@include ds-icon(volume-3-fill-m);
+}
+.ds-icon-volume-3-fill {
+	@include ds-icon(volume-3-fill);
+}
+.ds-icon-volume-3-l {
+	@include ds-icon(volume-3-l);
+}
+.ds-icon-volume-3-m-l {
+	@include ds-icon(volume-3-m-l);
+}
+.ds-icon-volume-3-m {
+	@include ds-icon(volume-3-m);
+}
+.ds-icon-volume-3 {
+	@include ds-icon(volume-3);
+}
+.ds-icon-volume-down-fill-l {
+	@include ds-icon(volume-down-fill-l);
+}
+.ds-icon-volume-down-fill-m-l {
+	@include ds-icon(volume-down-fill-m-l);
+}
+.ds-icon-volume-down-fill-m {
+	@include ds-icon(volume-down-fill-m);
+}
+.ds-icon-volume-down-fill {
+	@include ds-icon(volume-down-fill);
+}
+.ds-icon-volume-down-l {
+	@include ds-icon(volume-down-l);
+}
+.ds-icon-volume-down-m-l {
+	@include ds-icon(volume-down-m-l);
+}
+.ds-icon-volume-down-m {
+	@include ds-icon(volume-down-m);
+}
+.ds-icon-volume-down {
+	@include ds-icon(volume-down);
+}
+.ds-icon-volume-off-fill-l {
+	@include ds-icon(volume-off-fill-l);
+}
+.ds-icon-volume-off-fill-m-l {
+	@include ds-icon(volume-off-fill-m-l);
+}
+.ds-icon-volume-off-fill-m {
+	@include ds-icon(volume-off-fill-m);
+}
+.ds-icon-volume-off-fill {
+	@include ds-icon(volume-off-fill);
+}
+.ds-icon-volume-off-l {
+	@include ds-icon(volume-off-l);
+}
+.ds-icon-volume-off-m-l {
+	@include ds-icon(volume-off-m-l);
+}
+.ds-icon-volume-off-m {
+	@include ds-icon(volume-off-m);
+}
+.ds-icon-volume-off {
+	@include ds-icon(volume-off);
+}
+.ds-icon-volume-up-fill-l {
+	@include ds-icon(volume-up-fill-l);
+}
+.ds-icon-volume-up-fill-m-l {
+	@include ds-icon(volume-up-fill-m-l);
+}
+.ds-icon-volume-up-fill-m {
+	@include ds-icon(volume-up-fill-m);
+}
+.ds-icon-volume-up-fill {
+	@include ds-icon(volume-up-fill);
+}
+.ds-icon-volume-up-l {
+	@include ds-icon(volume-up-l);
+}
+.ds-icon-volume-up-m-l {
+	@include ds-icon(volume-up-m-l);
+}
+.ds-icon-volume-up-m {
+	@include ds-icon(volume-up-m);
+}
+.ds-icon-volume-up {
+	@include ds-icon(volume-up);
+}
+.ds-icon-facebook-l {
+	@include ds-icon(facebook-l);
+}
+.ds-icon-facebook-m-l {
+	@include ds-icon(facebook-m-l);
+}
+.ds-icon-facebook-m {
+	@include ds-icon(facebook-m);
+}
+.ds-icon-facebook {
+	@include ds-icon(facebook);
+}
+.ds-icon-github-l {
+	@include ds-icon(github-l);
+}
+.ds-icon-github-m-l {
+	@include ds-icon(github-m-l);
+}
+.ds-icon-github-m {
+	@include ds-icon(github-m);
+}
+.ds-icon-github {
+	@include ds-icon(github);
+}
+.ds-icon-googleplus-l {
+	@include ds-icon(googleplus-l);
+}
+.ds-icon-googleplus-m-l {
+	@include ds-icon(googleplus-m-l);
+}
+.ds-icon-googleplus-m {
+	@include ds-icon(googleplus-m);
+}
+.ds-icon-googleplus {
+	@include ds-icon(googleplus);
+}
+.ds-icon-instagram-l {
+	@include ds-icon(instagram-l);
+}
+.ds-icon-instagram-m-l {
+	@include ds-icon(instagram-m-l);
+}
+.ds-icon-instagram-m {
+	@include ds-icon(instagram-m);
+}
+.ds-icon-instagram {
+	@include ds-icon(instagram);
+}
+.ds-icon-linkedin-l {
+	@include ds-icon(linkedin-l);
+}
+.ds-icon-linkedin-m-l {
+	@include ds-icon(linkedin-m-l);
+}
+.ds-icon-linkedin-m {
+	@include ds-icon(linkedin-m);
+}
+.ds-icon-linkedin {
+	@include ds-icon(linkedin);
+}
+.ds-icon-slack-l {
+	@include ds-icon(slack-l);
+}
+.ds-icon-slack-m-l {
+	@include ds-icon(slack-m-l);
+}
+.ds-icon-slack-m {
+	@include ds-icon(slack-m);
+}
+.ds-icon-slack {
+	@include ds-icon(slack);
+}
+.ds-icon-twitter-l {
+	@include ds-icon(twitter-l);
+}
+.ds-icon-twitter-m-l {
+	@include ds-icon(twitter-m-l);
+}
+.ds-icon-twitter-m {
+	@include ds-icon(twitter-m);
+}
+.ds-icon-twitter {
+	@include ds-icon(twitter);
+}
+.ds-icon-youtube-l {
+	@include ds-icon(youtube-l);
+}
+.ds-icon-youtube-m-l {
+	@include ds-icon(youtube-m-l);
+}
+.ds-icon-youtube-m {
+	@include ds-icon(youtube-m);
+}
+.ds-icon-youtube {
+	@include ds-icon(youtube);
+}
+.ds-icon-announcement-l {
+	@include ds-icon(announcement-l);
+}
+.ds-icon-announcement-m-l {
+	@include ds-icon(announcement-m-l);
+}
+.ds-icon-announcement-m {
+	@include ds-icon(announcement-m);
+}
+.ds-icon-announcement {
+	@include ds-icon(announcement);
+}
+.ds-icon-chat-l {
+	@include ds-icon(chat-l);
+}
+.ds-icon-chat-m-l {
+	@include ds-icon(chat-m-l);
+}
+.ds-icon-chat-m {
+	@include ds-icon(chat-m);
+}
+.ds-icon-chat {
+	@include ds-icon(chat);
+}
+.ds-icon-comment-l {
+	@include ds-icon(comment-l);
+}
+.ds-icon-comment-m-l {
+	@include ds-icon(comment-m-l);
+}
+.ds-icon-comment-m {
+	@include ds-icon(comment-m);
+}
+.ds-icon-comment {
+	@include ds-icon(comment);
+}
+.ds-icon-forum-l {
+	@include ds-icon(forum-l);
+}
+.ds-icon-forum-m-l {
+	@include ds-icon(forum-m-l);
+}
+.ds-icon-forum-m {
+	@include ds-icon(forum-m);
+}
+.ds-icon-forum {
+	@include ds-icon(forum);
+}
+.ds-icon-heart-fill-l {
+	@include ds-icon(heart-fill-l);
+}
+.ds-icon-heart-fill-m-l {
+	@include ds-icon(heart-fill-m-l);
+}
+.ds-icon-heart-fill-m {
+	@include ds-icon(heart-fill-m);
+}
+.ds-icon-heart-fill {
+	@include ds-icon(heart-fill);
+}
+.ds-icon-heart-l {
+	@include ds-icon(heart-l);
+}
+.ds-icon-heart-m-l {
+	@include ds-icon(heart-m-l);
+}
+.ds-icon-heart-m {
+	@include ds-icon(heart-m);
+}
+.ds-icon-heart {
+	@include ds-icon(heart);
+}
+.ds-icon-mail-l {
+	@include ds-icon(mail-l);
+}
+.ds-icon-mail-m-l {
+	@include ds-icon(mail-m-l);
+}
+.ds-icon-mail-m {
+	@include ds-icon(mail-m);
+}
+.ds-icon-mail {
+	@include ds-icon(mail);
+}
+.ds-icon-notification-l {
+	@include ds-icon(notification-l);
+}
+.ds-icon-notification-m-l {
+	@include ds-icon(notification-m-l);
+}
+.ds-icon-notification-m {
+	@include ds-icon(notification-m);
+}
+.ds-icon-notification {
+	@include ds-icon(notification);
+}
+.ds-icon-phone-l {
+	@include ds-icon(phone-l);
+}
+.ds-icon-phone-m-l {
+	@include ds-icon(phone-m-l);
+}
+.ds-icon-phone-m {
+	@include ds-icon(phone-m);
+}
+.ds-icon-phone {
+	@include ds-icon(phone);
+}
+.ds-icon-role-l {
+	@include ds-icon(role-l);
+}
+.ds-icon-role-m-l {
+	@include ds-icon(role-m-l);
+}
+.ds-icon-role-m {
+	@include ds-icon(role-m);
+}
+.ds-icon-role {
+	@include ds-icon(role);
+}
+.ds-icon-rss-l {
+	@include ds-icon(rss-l);
+}
+.ds-icon-rss-m-l {
+	@include ds-icon(rss-m-l);
+}
+.ds-icon-rss-m {
+	@include ds-icon(rss-m);
+}
+.ds-icon-rss {
+	@include ds-icon(rss);
+}
+.ds-icon-sentiment-dead-l {
+	@include ds-icon(sentiment-dead-l);
+}
+.ds-icon-sentiment-dead-m-l {
+	@include ds-icon(sentiment-dead-m-l);
+}
+.ds-icon-sentiment-dead-m {
+	@include ds-icon(sentiment-dead-m);
+}
+.ds-icon-sentiment-dead {
+	@include ds-icon(sentiment-dead);
+}
+.ds-icon-sentiment-great-l {
+	@include ds-icon(sentiment-great-l);
+}
+.ds-icon-sentiment-great-m-l {
+	@include ds-icon(sentiment-great-m-l);
+}
+.ds-icon-sentiment-great-m {
+	@include ds-icon(sentiment-great-m);
+}
+.ds-icon-sentiment-great {
+	@include ds-icon(sentiment-great);
+}
+.ds-icon-sentiment-meh-l {
+	@include ds-icon(sentiment-meh-l);
+}
+.ds-icon-sentiment-meh-m-l {
+	@include ds-icon(sentiment-meh-m-l);
+}
+.ds-icon-sentiment-meh-m {
+	@include ds-icon(sentiment-meh-m);
+}
+.ds-icon-sentiment-meh {
+	@include ds-icon(sentiment-meh);
+}
+.ds-icon-sentiment-mute-l {
+	@include ds-icon(sentiment-mute-l);
+}
+.ds-icon-sentiment-mute-m-l {
+	@include ds-icon(sentiment-mute-m-l);
+}
+.ds-icon-sentiment-mute-m {
+	@include ds-icon(sentiment-mute-m);
+}
+.ds-icon-sentiment-mute {
+	@include ds-icon(sentiment-mute);
+}
+.ds-icon-sentiment-sad-l {
+	@include ds-icon(sentiment-sad-l);
+}
+.ds-icon-sentiment-sad-m-l {
+	@include ds-icon(sentiment-sad-m-l);
+}
+.ds-icon-sentiment-sad-m {
+	@include ds-icon(sentiment-sad-m);
+}
+.ds-icon-sentiment-sad {
+	@include ds-icon(sentiment-sad);
+}
+.ds-icon-sentiment-smile-l {
+	@include ds-icon(sentiment-smile-l);
+}
+.ds-icon-sentiment-smile-m-l {
+	@include ds-icon(sentiment-smile-m-l);
+}
+.ds-icon-sentiment-smile-m {
+	@include ds-icon(sentiment-smile-m);
+}
+.ds-icon-sentiment-smile {
+	@include ds-icon(sentiment-smile);
+}
+.ds-icon-sentiment-wink-l {
+	@include ds-icon(sentiment-wink-l);
+}
+.ds-icon-sentiment-wink-m-l {
+	@include ds-icon(sentiment-wink-m-l);
+}
+.ds-icon-sentiment-wink-m {
+	@include ds-icon(sentiment-wink-m);
+}
+.ds-icon-sentiment-wink {
+	@include ds-icon(sentiment-wink);
+}
+.ds-icon-sentiment-wow-l {
+	@include ds-icon(sentiment-wow-l);
+}
+.ds-icon-sentiment-wow-m-l {
+	@include ds-icon(sentiment-wow-m-l);
+}
+.ds-icon-sentiment-wow-m {
+	@include ds-icon(sentiment-wow-m);
+}
+.ds-icon-sentiment-wow {
+	@include ds-icon(sentiment-wow);
+}
+.ds-icon-share-l {
+	@include ds-icon(share-l);
+}
+.ds-icon-share-m-l {
+	@include ds-icon(share-m-l);
+}
+.ds-icon-share-m {
+	@include ds-icon(share-m);
+}
+.ds-icon-share {
+	@include ds-icon(share);
+}
+.ds-icon-star-fill-l {
+	@include ds-icon(star-fill-l);
+}
+.ds-icon-star-fill-m-l {
+	@include ds-icon(star-fill-m-l);
+}
+.ds-icon-star-fill-m {
+	@include ds-icon(star-fill-m);
+}
+.ds-icon-star-fill {
+	@include ds-icon(star-fill);
+}
+.ds-icon-star-half-l {
+	@include ds-icon(star-half-l);
+}
+.ds-icon-star-half-m-l {
+	@include ds-icon(star-half-m-l);
+}
+.ds-icon-star-half-m {
+	@include ds-icon(star-half-m);
+}
+.ds-icon-star-half {
+	@include ds-icon(star-half);
+}
+.ds-icon-star-l {
+	@include ds-icon(star-l);
+}
+.ds-icon-star-m-l {
+	@include ds-icon(star-m-l);
+}
+.ds-icon-star-m {
+	@include ds-icon(star-m);
+}
+.ds-icon-star {
+	@include ds-icon(star);
+}
+.ds-icon-team-l {
+	@include ds-icon(team-l);
+}
+.ds-icon-team-m-l {
+	@include ds-icon(team-m-l);
+}
+.ds-icon-team-m {
+	@include ds-icon(team-m);
+}
+.ds-icon-team {
+	@include ds-icon(team);
+}
+.ds-icon-thumbs-down-l {
+	@include ds-icon(thumbs-down-l);
+}
+.ds-icon-thumbs-down-m-l {
+	@include ds-icon(thumbs-down-m-l);
+}
+.ds-icon-thumbs-down-m {
+	@include ds-icon(thumbs-down-m);
+}
+.ds-icon-thumbs-down {
+	@include ds-icon(thumbs-down);
+}
+.ds-icon-thumbs-up-l {
+	@include ds-icon(thumbs-up-l);
+}
+.ds-icon-thumbs-up-m-l {
+	@include ds-icon(thumbs-up-m-l);
+}
+.ds-icon-thumbs-up-m {
+	@include ds-icon(thumbs-up-m);
+}
+.ds-icon-thumbs-up {
+	@include ds-icon(thumbs-up);
+}
+.ds-icon-video-chat-l {
+	@include ds-icon(video-chat-l);
+}
+.ds-icon-video-chat-m-l {
+	@include ds-icon(video-chat-m-l);
+}
+.ds-icon-video-chat-m {
+	@include ds-icon(video-chat-m);
+}
+.ds-icon-video-chat {
+	@include ds-icon(video-chat);
+}
+.ds-icon-archive-l {
+	@include ds-icon(archive-l);
+}
+.ds-icon-archive-m-l {
+	@include ds-icon(archive-m-l);
+}
+.ds-icon-archive-m {
+	@include ds-icon(archive-m);
+}
+.ds-icon-archive {
+	@include ds-icon(archive);
+}
+.ds-icon-attachment-l {
+	@include ds-icon(attachment-l);
+}
+.ds-icon-attachment-m-l {
+	@include ds-icon(attachment-m-l);
+}
+.ds-icon-attachment-m {
+	@include ds-icon(attachment-m);
+}
+.ds-icon-attachment {
+	@include ds-icon(attachment);
+}
+.ds-icon-bookmark-l {
+	@include ds-icon(bookmark-l);
+}
+.ds-icon-bookmark-m-l {
+	@include ds-icon(bookmark-m-l);
+}
+.ds-icon-bookmark-m {
+	@include ds-icon(bookmark-m);
+}
+.ds-icon-bookmark {
+	@include ds-icon(bookmark);
+}
+.ds-icon-close-circle-l {
+	@include ds-icon(close-circle-l);
+}
+.ds-icon-close-circle-m-l {
+	@include ds-icon(close-circle-m-l);
+}
+.ds-icon-close-circle-m {
+	@include ds-icon(close-circle-m);
+}
+.ds-icon-close-circle {
+	@include ds-icon(close-circle);
+}
+.ds-icon-close-l {
+	@include ds-icon(close-l);
+}
+.ds-icon-close-m-l {
+	@include ds-icon(close-m-l);
+}
+.ds-icon-close-m {
+	@include ds-icon(close-m);
+}
+.ds-icon-close {
+	@include ds-icon(close);
+}
+.ds-icon-cloud-download-l {
+	@include ds-icon(cloud-download-l);
+}
+.ds-icon-cloud-download-m-l {
+	@include ds-icon(cloud-download-m-l);
+}
+.ds-icon-cloud-download-m {
+	@include ds-icon(cloud-download-m);
+}
+.ds-icon-cloud-download {
+	@include ds-icon(cloud-download);
+}
+.ds-icon-cloud-upload-l {
+	@include ds-icon(cloud-upload-l);
+}
+.ds-icon-cloud-upload-m-l {
+	@include ds-icon(cloud-upload-m-l);
+}
+.ds-icon-cloud-upload-m {
+	@include ds-icon(cloud-upload-m);
+}
+.ds-icon-cloud-upload {
+	@include ds-icon(cloud-upload);
+}
+.ds-icon-dashboard-l {
+	@include ds-icon(dashboard-l);
+}
+.ds-icon-dashboard-m-l {
+	@include ds-icon(dashboard-m-l);
+}
+.ds-icon-dashboard-m {
+	@include ds-icon(dashboard-m);
+}
+.ds-icon-dashboard {
+	@include ds-icon(dashboard);
+}
+.ds-icon-download-l {
+	@include ds-icon(download-l);
+}
+.ds-icon-download-m-l {
+	@include ds-icon(download-m-l);
+}
+.ds-icon-download-m {
+	@include ds-icon(download-m);
+}
+.ds-icon-download {
+	@include ds-icon(download);
+}
+.ds-icon-drag-and-drop-l {
+	@include ds-icon(drag-and-drop-l);
+}
+.ds-icon-drag-and-drop-m-l {
+	@include ds-icon(drag-and-drop-m-l);
+}
+.ds-icon-drag-and-drop-m {
+	@include ds-icon(drag-and-drop-m);
+}
+.ds-icon-drag-and-drop {
+	@include ds-icon(drag-and-drop);
+}
+.ds-icon-edit-document-l {
+	@include ds-icon(edit-document-l);
+}
+.ds-icon-edit-document-m-l {
+	@include ds-icon(edit-document-m-l);
+}
+.ds-icon-edit-document-m {
+	@include ds-icon(edit-document-m);
+}
+.ds-icon-edit-document {
+	@include ds-icon(edit-document);
+}
+.ds-icon-edit-l {
+	@include ds-icon(edit-l);
+}
+.ds-icon-edit-m-l {
+	@include ds-icon(edit-m-l);
+}
+.ds-icon-edit-m {
+	@include ds-icon(edit-m);
+}
+.ds-icon-edit {
+	@include ds-icon(edit);
+}
+.ds-icon-expand-l {
+	@include ds-icon(expand-l);
+}
+.ds-icon-expand-m-l {
+	@include ds-icon(expand-m-l);
+}
+.ds-icon-expand-m {
+	@include ds-icon(expand-m);
+}
+.ds-icon-expand {
+	@include ds-icon(expand);
+}
+.ds-icon-export-l {
+	@include ds-icon(export-l);
+}
+.ds-icon-export-m-l {
+	@include ds-icon(export-m-l);
+}
+.ds-icon-export-m {
+	@include ds-icon(export-m);
+}
+.ds-icon-export {
+	@include ds-icon(export);
+}
+.ds-icon-filter-l {
+	@include ds-icon(filter-l);
+}
+.ds-icon-filter-m-l {
+	@include ds-icon(filter-m-l);
+}
+.ds-icon-filter-m {
+	@include ds-icon(filter-m);
+}
+.ds-icon-filter {
+	@include ds-icon(filter);
+}
+.ds-icon-first-page-l {
+	@include ds-icon(first-page-l);
+}
+.ds-icon-first-page-m-l {
+	@include ds-icon(first-page-m-l);
+}
+.ds-icon-first-page-m {
+	@include ds-icon(first-page-m);
+}
+.ds-icon-first-page {
+	@include ds-icon(first-page);
+}
+.ds-icon-home-l {
+	@include ds-icon(home-l);
+}
+.ds-icon-home-m-l {
+	@include ds-icon(home-m-l);
+}
+.ds-icon-home-m {
+	@include ds-icon(home-m);
+}
+.ds-icon-home {
+	@include ds-icon(home);
+}
+.ds-icon-language-switcher-l {
+	@include ds-icon(language-switcher-l);
+}
+.ds-icon-language-switcher-m-l {
+	@include ds-icon(language-switcher-m-l);
+}
+.ds-icon-language-switcher-m {
+	@include ds-icon(language-switcher-m);
+}
+.ds-icon-language-switcher {
+	@include ds-icon(language-switcher);
+}
+.ds-icon-last-page-l {
+	@include ds-icon(last-page-l);
+}
+.ds-icon-last-page-m-l {
+	@include ds-icon(last-page-m-l);
+}
+.ds-icon-last-page-m {
+	@include ds-icon(last-page-m);
+}
+.ds-icon-last-page {
+	@include ds-icon(last-page);
+}
+.ds-icon-link-external-l {
+	@include ds-icon(link-external-l);
+}
+.ds-icon-link-external-m-l {
+	@include ds-icon(link-external-m-l);
+}
+.ds-icon-link-external-m {
+	@include ds-icon(link-external-m);
+}
+.ds-icon-link-external {
+	@include ds-icon(link-external);
+}
+.ds-icon-link-l {
+	@include ds-icon(link-l);
+}
+.ds-icon-link-m-l {
+	@include ds-icon(link-m-l);
+}
+.ds-icon-link-m {
+	@include ds-icon(link-m);
+}
+.ds-icon-link {
+	@include ds-icon(link);
+}
+.ds-icon-menu-l {
+	@include ds-icon(menu-l);
+}
+.ds-icon-menu-m-l {
+	@include ds-icon(menu-m-l);
+}
+.ds-icon-menu-m {
+	@include ds-icon(menu-m);
+}
+.ds-icon-menu {
+	@include ds-icon(menu);
+}
+.ds-icon-minus-circle-l {
+	@include ds-icon(minus-circle-l);
+}
+.ds-icon-minus-circle-m-l {
+	@include ds-icon(minus-circle-m-l);
+}
+.ds-icon-minus-circle-m {
+	@include ds-icon(minus-circle-m);
+}
+.ds-icon-minus-circle {
+	@include ds-icon(minus-circle);
+}
+.ds-icon-minus-l {
+	@include ds-icon(minus-l);
+}
+.ds-icon-minus-m-l {
+	@include ds-icon(minus-m-l);
+}
+.ds-icon-minus-m {
+	@include ds-icon(minus-m);
+}
+.ds-icon-minus {
+	@include ds-icon(minus);
+}
+.ds-icon-more-filled-horizontal-l {
+	@include ds-icon(more-filled-horizontal-l);
+}
+.ds-icon-more-filled-horizontal-m-l {
+	@include ds-icon(more-filled-horizontal-m-l);
+}
+.ds-icon-more-filled-horizontal-m {
+	@include ds-icon(more-filled-horizontal-m);
+}
+.ds-icon-more-filled-horizontal {
+	@include ds-icon(more-filled-horizontal);
+}
+.ds-icon-more-filled-vertical-l {
+	@include ds-icon(more-filled-vertical-l);
+}
+.ds-icon-more-filled-vertical-m-l {
+	@include ds-icon(more-filled-vertical-m-l);
+}
+.ds-icon-more-filled-vertical-m {
+	@include ds-icon(more-filled-vertical-m);
+}
+.ds-icon-more-filled-vertical {
+	@include ds-icon(more-filled-vertical);
+}
+.ds-icon-more-horizontal-l {
+	@include ds-icon(more-horizontal-l);
+}
+.ds-icon-more-horizontal-m-l {
+	@include ds-icon(more-horizontal-m-l);
+}
+.ds-icon-more-horizontal-m {
+	@include ds-icon(more-horizontal-m);
+}
+.ds-icon-more-horizontal {
+	@include ds-icon(more-horizontal);
+}
+.ds-icon-more-vertical-l {
+	@include ds-icon(more-vertical-l);
+}
+.ds-icon-more-vertical-m-l {
+	@include ds-icon(more-vertical-m-l);
+}
+.ds-icon-more-vertical-m {
+	@include ds-icon(more-vertical-m);
+}
+.ds-icon-more-vertical {
+	@include ds-icon(more-vertical);
+}
+.ds-icon-plus-circle-l {
+	@include ds-icon(plus-circle-l);
+}
+.ds-icon-plus-circle-m-l {
+	@include ds-icon(plus-circle-m-l);
+}
+.ds-icon-plus-circle-m {
+	@include ds-icon(plus-circle-m);
+}
+.ds-icon-plus-circle {
+	@include ds-icon(plus-circle);
+}
+.ds-icon-plus-l {
+	@include ds-icon(plus-l);
+}
+.ds-icon-plus-m-l {
+	@include ds-icon(plus-m-l);
+}
+.ds-icon-plus-m {
+	@include ds-icon(plus-m);
+}
+.ds-icon-plus {
+	@include ds-icon(plus);
+}
+.ds-icon-print-l {
+	@include ds-icon(print-l);
+}
+.ds-icon-print-m-l {
+	@include ds-icon(print-m-l);
+}
+.ds-icon-print-m {
+	@include ds-icon(print-m);
+}
+.ds-icon-print {
+	@include ds-icon(print);
+}
+.ds-icon-profile-l {
+	@include ds-icon(profile-l);
+}
+.ds-icon-profile-m-l {
+	@include ds-icon(profile-m-l);
+}
+.ds-icon-profile-m {
+	@include ds-icon(profile-m);
+}
+.ds-icon-profile {
+	@include ds-icon(profile);
+}
+.ds-icon-refresh-l {
+	@include ds-icon(refresh-l);
+}
+.ds-icon-refresh-m-l {
+	@include ds-icon(refresh-m-l);
+}
+.ds-icon-refresh-m {
+	@include ds-icon(refresh-m);
+}
+.ds-icon-refresh {
+	@include ds-icon(refresh);
+}
+.ds-icon-reset-l {
+	@include ds-icon(reset-l);
+}
+.ds-icon-reset-m-l {
+	@include ds-icon(reset-m-l);
+}
+.ds-icon-reset-m {
+	@include ds-icon(reset-m);
+}
+.ds-icon-reset {
+	@include ds-icon(reset);
+}
+.ds-icon-rotate-l {
+	@include ds-icon(rotate-l);
+}
+.ds-icon-rotate-m-l {
+	@include ds-icon(rotate-m-l);
+}
+.ds-icon-rotate-m {
+	@include ds-icon(rotate-m);
+}
+.ds-icon-rotate {
+	@include ds-icon(rotate);
+}
+.ds-icon-save-l {
+	@include ds-icon(save-l);
+}
+.ds-icon-save-m-l {
+	@include ds-icon(save-m-l);
+}
+.ds-icon-save-m {
+	@include ds-icon(save-m);
+}
+.ds-icon-save {
+	@include ds-icon(save);
+}
+.ds-icon-search-l {
+	@include ds-icon(search-l);
+}
+.ds-icon-search-m-l {
+	@include ds-icon(search-m-l);
+}
+.ds-icon-search-m {
+	@include ds-icon(search-m);
+}
+.ds-icon-search {
+	@include ds-icon(search);
+}
+.ds-icon-settings-l {
+	@include ds-icon(settings-l);
+}
+.ds-icon-settings-m-l {
+	@include ds-icon(settings-m-l);
+}
+.ds-icon-settings-m {
+	@include ds-icon(settings-m);
+}
+.ds-icon-settings {
+	@include ds-icon(settings);
+}
+.ds-icon-sort-ascending-l {
+	@include ds-icon(sort-ascending-l);
+}
+.ds-icon-sort-ascending-m-l {
+	@include ds-icon(sort-ascending-m-l);
+}
+.ds-icon-sort-ascending-m {
+	@include ds-icon(sort-ascending-m);
+}
+.ds-icon-sort-ascending {
+	@include ds-icon(sort-ascending);
+}
+.ds-icon-sort-descending-l {
+	@include ds-icon(sort-descending-l);
+}
+.ds-icon-sort-descending-m-l {
+	@include ds-icon(sort-descending-m-l);
+}
+.ds-icon-sort-descending-m {
+	@include ds-icon(sort-descending-m);
+}
+.ds-icon-sort-descending {
+	@include ds-icon(sort-descending);
+}
+.ds-icon-sort-l {
+	@include ds-icon(sort-l);
+}
+.ds-icon-sort-m-l {
+	@include ds-icon(sort-m-l);
+}
+.ds-icon-sort-m {
+	@include ds-icon(sort-m);
+}
+.ds-icon-sort {
+	@include ds-icon(sort);
+}
+.ds-icon-tools-l {
+	@include ds-icon(tools-l);
+}
+.ds-icon-tools-m-l {
+	@include ds-icon(tools-m-l);
+}
+.ds-icon-tools-m {
+	@include ds-icon(tools-m);
+}
+.ds-icon-tools {
+	@include ds-icon(tools);
+}
+.ds-icon-top-l {
+	@include ds-icon(top-l);
+}
+.ds-icon-top-m-l {
+	@include ds-icon(top-m-l);
+}
+.ds-icon-top-m {
+	@include ds-icon(top-m);
+}
+.ds-icon-top {
+	@include ds-icon(top);
+}
+.ds-icon-upload-l {
+	@include ds-icon(upload-l);
+}
+.ds-icon-upload-m-l {
+	@include ds-icon(upload-m-l);
+}
+.ds-icon-upload-m {
+	@include ds-icon(upload-m);
+}
+.ds-icon-upload {
+	@include ds-icon(upload);
+}
+.ds-icon-view-l {
+	@include ds-icon(view-l);
+}
+.ds-icon-view-m-l {
+	@include ds-icon(view-m-l);
+}
+.ds-icon-view-m {
+	@include ds-icon(view-m);
+}
+.ds-icon-view {
+	@include ds-icon(view);
+}
+.ds-icon-zoom-in-l {
+	@include ds-icon(zoom-in-l);
+}
+.ds-icon-zoom-in-m-l {
+	@include ds-icon(zoom-in-m-l);
+}
+.ds-icon-zoom-in-m {
+	@include ds-icon(zoom-in-m);
+}
+.ds-icon-zoom-in {
+	@include ds-icon(zoom-in);
+}
+.ds-icon-zoom-out-l {
+	@include ds-icon(zoom-out-l);
+}
+.ds-icon-zoom-out-m-l {
+	@include ds-icon(zoom-out-m-l);
+}
+.ds-icon-zoom-out-m {
+	@include ds-icon(zoom-out-m);
+}
+.ds-icon-zoom-out {
+	@include ds-icon(zoom-out);
+}
+.ds-icon-alert-l {
+	@include ds-icon(alert-l);
+}
+.ds-icon-alert-m-l {
+	@include ds-icon(alert-m-l);
+}
+.ds-icon-alert-m {
+	@include ds-icon(alert-m);
+}
+.ds-icon-alert {
+	@include ds-icon(alert);
+}
+.ds-icon-arrow-down-l {
+	@include ds-icon(arrow-down-l);
+}
+.ds-icon-arrow-down-m-l {
+	@include ds-icon(arrow-down-m-l);
+}
+.ds-icon-arrow-down-m {
+	@include ds-icon(arrow-down-m);
+}
+.ds-icon-arrow-down {
+	@include ds-icon(arrow-down);
+}
+.ds-icon-arrow-left-l {
+	@include ds-icon(arrow-left-l);
+}
+.ds-icon-arrow-left-m-l {
+	@include ds-icon(arrow-left-m-l);
+}
+.ds-icon-arrow-left-m {
+	@include ds-icon(arrow-left-m);
+}
+.ds-icon-arrow-left {
+	@include ds-icon(arrow-left);
+}
+.ds-icon-arrow-right-l {
+	@include ds-icon(arrow-right-l);
+}
+.ds-icon-arrow-right-m-l {
+	@include ds-icon(arrow-right-m-l);
+}
+.ds-icon-arrow-right-m {
+	@include ds-icon(arrow-right-m);
+}
+.ds-icon-arrow-right {
+	@include ds-icon(arrow-right);
+}
+.ds-icon-arrow-up-l {
+	@include ds-icon(arrow-up-l);
+}
+.ds-icon-arrow-up-m-l {
+	@include ds-icon(arrow-up-m-l);
+}
+.ds-icon-arrow-up-m {
+	@include ds-icon(arrow-up-m);
+}
+.ds-icon-arrow-up {
+	@include ds-icon(arrow-up);
+}
+.ds-icon-box-l {
+	@include ds-icon(box-l);
+}
+.ds-icon-box-m-l {
+	@include ds-icon(box-m-l);
+}
+.ds-icon-box-m {
+	@include ds-icon(box-m);
+}
+.ds-icon-box {
+	@include ds-icon(box);
+}
+.ds-icon-calculator-l {
+	@include ds-icon(calculator-l);
+}
+.ds-icon-calculator-m-l {
+	@include ds-icon(calculator-m-l);
+}
+.ds-icon-calculator-m {
+	@include ds-icon(calculator-m);
+}
+.ds-icon-calculator {
+	@include ds-icon(calculator);
+}
+.ds-icon-calendar-l {
+	@include ds-icon(calendar-l);
+}
+.ds-icon-calendar-m-l {
+	@include ds-icon(calendar-m-l);
+}
+.ds-icon-calendar-m {
+	@include ds-icon(calendar-m);
+}
+.ds-icon-calendar-new-l {
+	@include ds-icon(calendar-new-l);
+}
+.ds-icon-calendar-new-m-l {
+	@include ds-icon(calendar-new-m-l);
+}
+.ds-icon-calendar-new-m {
+	@include ds-icon(calendar-new-m);
+}
+.ds-icon-calendar-new {
+	@include ds-icon(calendar-new);
+}
+.ds-icon-calendar {
+	@include ds-icon(calendar);
+}
+.ds-icon-camera-l {
+	@include ds-icon(camera-l);
+}
+.ds-icon-camera-m-l {
+	@include ds-icon(camera-m-l);
+}
+.ds-icon-camera-m {
+	@include ds-icon(camera-m);
+}
+.ds-icon-camera {
+	@include ds-icon(camera);
+}
+.ds-icon-caret-circle-down-l {
+	@include ds-icon(caret-circle-down-l);
+}
+.ds-icon-caret-circle-down-m-l {
+	@include ds-icon(caret-circle-down-m-l);
+}
+.ds-icon-caret-circle-down-m {
+	@include ds-icon(caret-circle-down-m);
+}
+.ds-icon-caret-circle-down {
+	@include ds-icon(caret-circle-down);
+}
+.ds-icon-caret-circle-left-l {
+	@include ds-icon(caret-circle-left-l);
+}
+.ds-icon-caret-circle-left-m-l {
+	@include ds-icon(caret-circle-left-m-l);
+}
+.ds-icon-caret-circle-left-m {
+	@include ds-icon(caret-circle-left-m);
+}
+.ds-icon-caret-circle-left {
+	@include ds-icon(caret-circle-left);
+}
+.ds-icon-caret-circle-right-l {
+	@include ds-icon(caret-circle-right-l);
+}
+.ds-icon-caret-circle-right-m-l {
+	@include ds-icon(caret-circle-right-m-l);
+}
+.ds-icon-caret-circle-right-m {
+	@include ds-icon(caret-circle-right-m);
+}
+.ds-icon-caret-circle-right {
+	@include ds-icon(caret-circle-right);
+}
+.ds-icon-caret-circle-up-l {
+	@include ds-icon(caret-circle-up-l);
+}
+.ds-icon-caret-circle-up-m-l {
+	@include ds-icon(caret-circle-up-m-l);
+}
+.ds-icon-caret-circle-up-m {
+	@include ds-icon(caret-circle-up-m);
+}
+.ds-icon-caret-circle-up {
+	@include ds-icon(caret-circle-up);
+}
+.ds-icon-caret-down-fill-l {
+	@include ds-icon(caret-down-fill-l);
+}
+.ds-icon-caret-down-fill-m-l {
+	@include ds-icon(caret-down-fill-m-l);
+}
+.ds-icon-caret-down-fill-m {
+	@include ds-icon(caret-down-fill-m);
+}
+.ds-icon-caret-down-fill {
+	@include ds-icon(caret-down-fill);
+}
+.ds-icon-caret-down-l {
+	@include ds-icon(caret-down-l);
+}
+.ds-icon-caret-down-m-l {
+	@include ds-icon(caret-down-m-l);
+}
+.ds-icon-caret-down-m {
+	@include ds-icon(caret-down-m);
+}
+.ds-icon-caret-down {
+	@include ds-icon(caret-down);
+}
+.ds-icon-caret-left-fill-l {
+	@include ds-icon(caret-left-fill-l);
+}
+.ds-icon-caret-left-fill-m-l {
+	@include ds-icon(caret-left-fill-m-l);
+}
+.ds-icon-caret-left-fill-m {
+	@include ds-icon(caret-left-fill-m);
+}
+.ds-icon-caret-left-fill {
+	@include ds-icon(caret-left-fill);
+}
+.ds-icon-caret-left-l {
+	@include ds-icon(caret-left-l);
+}
+.ds-icon-caret-left-m-l {
+	@include ds-icon(caret-left-m-l);
+}
+.ds-icon-caret-left-m {
+	@include ds-icon(caret-left-m);
+}
+.ds-icon-caret-left {
+	@include ds-icon(caret-left);
+}
+.ds-icon-caret-right-fill-l {
+	@include ds-icon(caret-right-fill-l);
+}
+.ds-icon-caret-right-fill-m-l {
+	@include ds-icon(caret-right-fill-m-l);
+}
+.ds-icon-caret-right-fill-m {
+	@include ds-icon(caret-right-fill-m);
+}
+.ds-icon-caret-right-fill {
+	@include ds-icon(caret-right-fill);
+}
+.ds-icon-caret-right-l {
+	@include ds-icon(caret-right-l);
+}
+.ds-icon-caret-right-m-l {
+	@include ds-icon(caret-right-m-l);
+}
+.ds-icon-caret-right-m {
+	@include ds-icon(caret-right-m);
+}
+.ds-icon-caret-right {
+	@include ds-icon(caret-right);
+}
+.ds-icon-caret-select-l {
+	@include ds-icon(caret-select-l);
+}
+.ds-icon-caret-select-m-l {
+	@include ds-icon(caret-select-m-l);
+}
+.ds-icon-caret-select-m {
+	@include ds-icon(caret-select-m);
+}
+.ds-icon-caret-select {
+	@include ds-icon(caret-select);
+}
+.ds-icon-caret-up-fill-l {
+	@include ds-icon(caret-up-fill-l);
+}
+.ds-icon-caret-up-fill-m-l {
+	@include ds-icon(caret-up-fill-m-l);
+}
+.ds-icon-caret-up-fill-m {
+	@include ds-icon(caret-up-fill-m);
+}
+.ds-icon-caret-up-fill {
+	@include ds-icon(caret-up-fill);
+}
+.ds-icon-caret-up-l {
+	@include ds-icon(caret-up-l);
+}
+.ds-icon-caret-up-m-l {
+	@include ds-icon(caret-up-m-l);
+}
+.ds-icon-caret-up-m {
+	@include ds-icon(caret-up-m);
+}
+.ds-icon-caret-up {
+	@include ds-icon(caret-up);
+}
+.ds-icon-cart-l {
+	@include ds-icon(cart-l);
+}
+.ds-icon-cart-m-l {
+	@include ds-icon(cart-m-l);
+}
+.ds-icon-cart-m {
+	@include ds-icon(cart-m);
+}
+.ds-icon-cart {
+	@include ds-icon(cart);
+}
+.ds-icon-check-box-l {
+	@include ds-icon(check-box-l);
+}
+.ds-icon-check-box-m-l {
+	@include ds-icon(check-box-m-l);
+}
+.ds-icon-check-box-m {
+	@include ds-icon(check-box-m);
+}
+.ds-icon-check-box {
+	@include ds-icon(check-box);
+}
+.ds-icon-check-circle-l {
+	@include ds-icon(check-circle-l);
+}
+.ds-icon-check-circle-m-l {
+	@include ds-icon(check-circle-m-l);
+}
+.ds-icon-check-circle-m {
+	@include ds-icon(check-circle-m);
+}
+.ds-icon-check-circle {
+	@include ds-icon(check-circle);
+}
+.ds-icon-check-l {
+	@include ds-icon(check-l);
+}
+.ds-icon-check-m-l {
+	@include ds-icon(check-m-l);
+}
+.ds-icon-check-m {
+	@include ds-icon(check-m);
+}
+.ds-icon-check {
+	@include ds-icon(check);
+}
+.ds-icon-circle-fill-l {
+	@include ds-icon(circle-fill-l);
+}
+.ds-icon-circle-fill-m-l {
+	@include ds-icon(circle-fill-m-l);
+}
+.ds-icon-circle-fill-m {
+	@include ds-icon(circle-fill-m);
+}
+.ds-icon-circle-fill {
+	@include ds-icon(circle-fill);
+}
+.ds-icon-circle-l {
+	@include ds-icon(circle-l);
+}
+.ds-icon-circle-m-l {
+	@include ds-icon(circle-m-l);
+}
+.ds-icon-circle-m {
+	@include ds-icon(circle-m);
+}
+.ds-icon-circle {
+	@include ds-icon(circle);
+}
+.ds-icon-clock-l {
+	@include ds-icon(clock-l);
+}
+.ds-icon-clock-m-l {
+	@include ds-icon(clock-m-l);
+}
+.ds-icon-clock-m {
+	@include ds-icon(clock-m);
+}
+.ds-icon-clock {
+	@include ds-icon(clock);
+}
+.ds-icon-cloud-l {
+	@include ds-icon(cloud-l);
+}
+.ds-icon-cloud-m-l {
+	@include ds-icon(cloud-m-l);
+}
+.ds-icon-cloud-m {
+	@include ds-icon(cloud-m);
+}
+.ds-icon-cloud {
+	@include ds-icon(cloud);
+}
+.ds-icon-code-l {
+	@include ds-icon(code-l);
+}
+.ds-icon-code-m-l {
+	@include ds-icon(code-m-l);
+}
+.ds-icon-code-m {
+	@include ds-icon(code-m);
+}
+.ds-icon-code {
+	@include ds-icon(code);
+}
+.ds-icon-currency-l {
+	@include ds-icon(currency-l);
+}
+.ds-icon-currency-m-l {
+	@include ds-icon(currency-m-l);
+}
+.ds-icon-currency-m {
+	@include ds-icon(currency-m);
+}
+.ds-icon-currency {
+	@include ds-icon(currency);
+}
+.ds-icon-desktop-l {
+	@include ds-icon(desktop-l);
+}
+.ds-icon-desktop-m-l {
+	@include ds-icon(desktop-m-l);
+}
+.ds-icon-desktop-m {
+	@include ds-icon(desktop-m);
+}
+.ds-icon-desktop {
+	@include ds-icon(desktop);
+}
+.ds-icon-help-l {
+	@include ds-icon(help-l);
+}
+.ds-icon-help-m-l {
+	@include ds-icon(help-m-l);
+}
+.ds-icon-help-m {
+	@include ds-icon(help-m);
+}
+.ds-icon-help {
+	@include ds-icon(help);
+}
+.ds-icon-info-l {
+	@include ds-icon(info-l);
+}
+.ds-icon-info-m-l {
+	@include ds-icon(info-m-l);
+}
+.ds-icon-info-m {
+	@include ds-icon(info-m);
+}
+.ds-icon-info {
+	@include ds-icon(info);
+}
+.ds-icon-locked-l {
+	@include ds-icon(locked-l);
+}
+.ds-icon-locked-m-l {
+	@include ds-icon(locked-m-l);
+}
+.ds-icon-locked-m {
+	@include ds-icon(locked-m);
+}
+.ds-icon-locked {
+	@include ds-icon(locked);
+}
+.ds-icon-m-dash-l {
+	@include ds-icon(m-dash-l);
+}
+.ds-icon-m-dash-m-l {
+	@include ds-icon(m-dash-m-l);
+}
+.ds-icon-m-dash-m {
+	@include ds-icon(m-dash-m);
+}
+.ds-icon-m-dash {
+	@include ds-icon(m-dash);
+}
+.ds-icon-map-l {
+	@include ds-icon(map-l);
+}
+.ds-icon-map-m-l {
+	@include ds-icon(map-m-l);
+}
+.ds-icon-map-m {
+	@include ds-icon(map-m);
+}
+.ds-icon-map {
+	@include ds-icon(map);
+}
+.ds-icon-media-library-l {
+	@include ds-icon(media-library-l);
+}
+.ds-icon-media-library-m-l {
+	@include ds-icon(media-library-m-l);
+}
+.ds-icon-media-library-m {
+	@include ds-icon(media-library-m);
+}
+.ds-icon-media-library {
+	@include ds-icon(media-library);
+}
+.ds-icon-mobile-l {
+	@include ds-icon(mobile-l);
+}
+.ds-icon-mobile-m-l {
+	@include ds-icon(mobile-m-l);
+}
+.ds-icon-mobile-m {
+	@include ds-icon(mobile-m);
+}
+.ds-icon-mobile {
+	@include ds-icon(mobile);
+}
+.ds-icon-n-dash-l {
+	@include ds-icon(n-dash-l);
+}
+.ds-icon-n-dash-m-l {
+	@include ds-icon(n-dash-m-l);
+}
+.ds-icon-n-dash-m {
+	@include ds-icon(n-dash-m);
+}
+.ds-icon-n-dash {
+	@include ds-icon(n-dash);
+}
+.ds-icon-new-l {
+	@include ds-icon(new-l);
+}
+.ds-icon-new-m-l {
+	@include ds-icon(new-m-l);
+}
+.ds-icon-new-m {
+	@include ds-icon(new-m);
+}
+.ds-icon-new {
+	@include ds-icon(new);
+}
+.ds-icon-payment-l {
+	@include ds-icon(payment-l);
+}
+.ds-icon-payment-m-l {
+	@include ds-icon(payment-m-l);
+}
+.ds-icon-payment-m {
+	@include ds-icon(payment-m);
+}
+.ds-icon-payment {
+	@include ds-icon(payment);
+}
+.ds-icon-product-l {
+	@include ds-icon(product-l);
+}
+.ds-icon-product-m-l {
+	@include ds-icon(product-m-l);
+}
+.ds-icon-product-m {
+	@include ds-icon(product-m);
+}
+.ds-icon-product {
+	@include ds-icon(product);
+}
+.ds-icon-recommended-l {
+	@include ds-icon(recommended-l);
+}
+.ds-icon-recommended-m-l {
+	@include ds-icon(recommended-m-l);
+}
+.ds-icon-recommended-m {
+	@include ds-icon(recommended-m);
+}
+.ds-icon-recommended {
+	@include ds-icon(recommended);
+}
+.ds-icon-tablet-l {
+	@include ds-icon(tablet-l);
+}
+.ds-icon-tablet-m-l {
+	@include ds-icon(tablet-m-l);
+}
+.ds-icon-tablet-m {
+	@include ds-icon(tablet-m);
+}
+.ds-icon-tablet {
+	@include ds-icon(tablet);
+}
+.ds-icon-tag-l {
+	@include ds-icon(tag-l);
+}
+.ds-icon-tag-m-l {
+	@include ds-icon(tag-m-l);
+}
+.ds-icon-tag-m {
+	@include ds-icon(tag-m);
+}
+.ds-icon-tag {
+	@include ds-icon(tag);
+}
+.ds-icon-transfer-l {
+	@include ds-icon(transfer-l);
+}
+.ds-icon-transfer-m-l {
+	@include ds-icon(transfer-m-l);
+}
+.ds-icon-transfer-m {
+	@include ds-icon(transfer-m);
+}
+.ds-icon-transfer {
+	@include ds-icon(transfer);
+}
+.ds-icon-trash-l {
+	@include ds-icon(trash-l);
+}
+.ds-icon-trash-m-l {
+	@include ds-icon(trash-m-l);
+}
+.ds-icon-trash-m {
+	@include ds-icon(trash-m);
+}
+.ds-icon-trash {
+	@include ds-icon(trash);
+}
+.ds-icon-travel-l {
+	@include ds-icon(travel-l);
+}
+.ds-icon-travel-m-l {
+	@include ds-icon(travel-m-l);
+}
+.ds-icon-travel-m {
+	@include ds-icon(travel-m);
+}
+.ds-icon-travel {
+	@include ds-icon(travel);
+}
+.ds-icon-unlocked-l {
+	@include ds-icon(unlocked-l);
+}
+.ds-icon-unlocked-m-l {
+	@include ds-icon(unlocked-m-l);
+}
+.ds-icon-unlocked-m {
+	@include ds-icon(unlocked-m);
+}
+.ds-icon-unlocked {
+	@include ds-icon(unlocked);
+}
+.ds-icon-wiki-l {
+	@include ds-icon(wiki-l);
+}
+.ds-icon-wiki-m-l {
+	@include ds-icon(wiki-m-l);
+}
+.ds-icon-wiki-m {
+	@include ds-icon(wiki-m);
+}
+.ds-icon-wiki {
+	@include ds-icon(wiki);
+}
+.ds-icon-wireless-l {
+	@include ds-icon(wireless-l);
+}
+.ds-icon-wireless-m-l {
+	@include ds-icon(wireless-m-l);
+}
+.ds-icon-wireless-m {
+	@include ds-icon(wireless-m);
+}
+.ds-icon-wireless {
+	@include ds-icon(wireless);
+}
+
+
+.ds-icon-size-default {
+	&::before,
+	&::after {
+		font-size: #{px-to-rem(23px)};
+	}
+}
+
+.ds-icon-size-medium {
+	&::before,
+	&::after {
+		font-size: #{px-to-rem(37px)};
+	}
+}
+
+.ds-icon-size-large {
+	&::before,
+	&::after {
+		font-size: #{px-to-rem(61px)};
+	}
+}

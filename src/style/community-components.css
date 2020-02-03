@@ -1,0 +1,42 @@
+.block-quote {
+    font-size: 16px;
+	font-style: italic;
+    color: #0370b0;
+}
+
+.block-quote:before .block-quote:after {
+    display: block;
+    position: relative;
+    color: black;
+}
+
+.block-quote:after {
+    content: '\201D';   
+}
+
+.block-quote:before {
+    content: '\201C';
+}
+
+.justify-center {
+    justify-content: center;   
+    text-align: center !important;
+}
+
+.justify-left {
+    justify-content: left;
+    text-align: left !important;
+}
+
+.justify-right {
+    justify-content: right;
+    text-align: right !important;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.text-bottom {
+    vertical-align: bottom;
+}

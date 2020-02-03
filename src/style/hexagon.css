@@ -1,0 +1,40 @@
+.hexagon {
+    width: 100px;
+    height: 55px;
+    position: relative;
+}
+
+.hexagon,
+.hexagon:before,
+.hexagon:after {
+    /* background: red; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.hexagon:before,
+.hexagon:after {
+    content: "";
+    position: absolute;
+    left: 22px;
+    width: 57px;
+    height: 57px;
+    transform: rotate(145deg) skew(22.5deg);
+}
+
+.hexagon:before {
+    top: -29px;
+}
+
+.hexagon:after {
+    top: 27px;
+}
+
+.hexagon span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 55px;
+    /* background: red; */
+    z-index: 1;
+}

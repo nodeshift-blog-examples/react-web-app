@@ -1,0 +1,13 @@
+.notfound{
+    text-align: center;
+    width: 400px;
+    margin: 100px auto;
+}
+
+.notfound-code{
+    font-size: 150px;
+    font-weight: 600;
+}
+.notfound-code span{
+    color:#3d70b2;
+}

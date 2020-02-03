@@ -1,0 +1,196 @@
+.image-fyre {
+	background-image: url("../images/logo-fyre.svg");
+	background-color: #33c6f4 !important;
+}
+
+.image-hdc {
+	background-image: url("../images/hdc-logo.png");
+	background-color: #33c6f4 !important;
+}
+
+.image-seismic {
+	background-image: url("../images/seismic-icon.jpg");
+	background-color: white !important;
+}
+
+.image-wiki {
+	background-image: url("../images/icon-wiki.svg");
+}
+
+.image-video {
+	background-image: url("../images/icon-video.svg");
+}
+
+.image-bee {
+	background-image: url("../images/icon-bee.svg");
+}
+
+.image-csmo {
+	background-image: url("../images/icon-cloud.svg");
+	background-color: #dd2113 !important;
+}
+
+.image-devops {
+	background-image: url("../images/icon-cloud.svg");
+	background-color: #0370b0 !important;
+}
+
+.image-mcm {
+	background-image: url("../images/icon-cloud.svg");
+	background-color: #32af76 !important;
+}
+
+.image-system {
+	background-image: url("../images/icon-cloud.svg");
+	background-color: #012f59 !important;
+}
+
+.image-tradit {
+	background-image: url("../images/icon-cloud.svg");
+	background-color: orange !important;
+}
+
+.image-devops-disabled {
+	background-image: url("../images/icon-cloud.svg");
+	background-color: white !important;
+}
+
+.image-devops-disabled:hover {
+	background-image: url("../images/icon-cloud.svg");
+	background-color: #0370b0 !important;
+}
+
+.image-mcm-disabled {
+	background-image: url("../images/icon-cloud.svg");
+	background-color: white !important;
+}
+
+.image-mcm-disabled:hover {
+	background-image: url("../images/icon-cloud.svg");
+	background-color: #32af76 !important;
+}
+
+.image-system-disabled {
+	background-image: url("../images/icon-cloud.svg");
+	background-color: white !important;
+}
+
+.image-system-disabled:hover {
+	background-image: url("../images/icon-cloud.svg");
+	background-color: #012f59 !important;
+}
+
+.image-tradit-disabled {
+	background-image: url("../images/icon-cloud.svg");
+	background-color: white !important;
+}
+
+.image-tradit-disabled:hover {
+	background-image: url("../images/icon-cloud.svg");
+	background-color: orange !important;
+}
+
+.image-csmo-disabled {
+	background-image: url("../images/icon-cloud.svg");
+	background-color: white !important;
+}
+
+.image-csmo-disabled:hover {
+	background-image: url("../images/icon-cloud.svg");
+	background-color: #dd2113 !important;
+}
+
+.image-app {
+	background-image: url("../images/icon-app.svg");
+}
+
+.image-slack {
+	background-image: url("https://w3.ibm.com/homepage/assets/cd8233433eb4d818e6023ccc8341ccd9.svg");
+}
+
+.image-git {
+	background-image: url("https://w3.ibm.com/homepage/assets/970ec770d074b27355f8266b5575a6f7.png");
+}
+
+.image-box {
+	background-image: url("https://w3.ibm.com/homepage/assets/a9be9f53bb4302b5cec067f1908ecac7.svg");
+}
+
+.image-yl-series {
+	background-image: url("../images/yl_logo.svg");
+	background-color: #004065 !important;
+}
+
+.image-webex {
+	background-image: url("https://w3.ibm.com/homepage/assets/71080c63a7719c105e9aa912bdb518a8.svg");
+}
+
+.image-ibm-garage {
+	background-image: url("../images/cloud-innovate-wheel-no-ring.png");
+}
+
+.image-ibm-product {
+	background-image: url("../images/ProductPages.png");
+	background-color: #32af76 !important;
+}
+
+.image-watson-media {
+	background-image: url("../images/CloudVid.png");
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	min-height: 124px;
+}
+
+.tile-height {
+	height: 124px;
+}
+
+.tdsm-banner-image {
+	background-image: url("../images/connect.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-top: 2px;
+}
+
+.csmo-image {
+	background-image: url("../images/garage_csmo_diag.png");
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	min-height: 150px;
+}
+
+.devops-image {
+	/* background-image: url("../images/cloud-innovate-wheel-no-ring.png"); */
+	background-image: url("../images/gbs_122-garage-method.svg");
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	min-height: 200px;
+}
+
+.tradit-image {
+	background-image: url("../images/tradit.jpg");
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	min-height: 150px;
+}
+
+.mcm-image {
+	background-image: url("../images/mcm-summary.jpg");
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	min-height: 200px;
+}
+
+.system-image {
+	background-image: url("../images/cloudpak_system.jpg");
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	min-height: 200px;
+}
