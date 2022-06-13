@@ -20,6 +20,11 @@ parameters:
     description: "The OpenShift Namespace where the ImageStream resides."
     required: true
     value: "openshift"
+  - name: NODEJS_VERSION
+    displayName: "Version of NodeJS Image"
+    description: "Version of NodeJS image to be used (14-ubi8, 16-ubi8, or latest)."
+    required: true
+    value: "16-ubi8"
   - name: MEMORY_LIMIT
     displayName: "Memory Limit"
     description: "Maximum amount of memory the container can use."
@@ -40,16 +45,10 @@ parameters:
     displayName: Source Directory
     value: .
     required: true
-  - name: OUTPUT_DIR
-    description: The location of the compiled static files from your web apps builder
-    displayName: Output Directory
-    value: build
-    required: false
-  - name: YARN_ENABLED
-    description: A flag to enable the use of the Yarn package manager
-    displayName: Yarn Enabled
-    value: "true"
-    required: false
+  - name: NPM_MIRROR
+    description: The custom NPM mirror URL
+    displayName: Custom NPM mirror URL
+    value: ""
   - name: GITHUB_WEBHOOK_SECRET
     description: A secret string used to configure the GitHub webhook.
     displayName: GitHub Webhook Secret
@@ -86,13 +85,12 @@ objects:
         type: Source
         sourceStrategy:
           env:
-            - name: OUTPUT_DIR
-              value: ${OUTPUT_DIR}
-            - name: YARN_ENABLED
-              value: ${YARN_ENABLED}
+            - name: NPM_MIRROR
+              value: ${NPM_MIRROR}
           from:
-            kind: DockerImage
-            name: 'nodeshift/ubi8-s2i-web-app:10.x'
+            kind: ImageStreamTag
+            namespace: ${NAMESPACE}
+            name: nodejs:${NODEJS_VERSION}
       triggers:
         - github:
             secret: '${GITHUB_WEBHOOK_SECRET}'
@@ -117,7 +115,7 @@ objects:
               securityContext:
                 privileged: false
               ports:
-                - containerPort: 8080
+                - containerPort: 3000
                   name: http
                   protocol: TCP
               resources:
@@ -149,6 +147,7 @@ objects:
       ports:
         - name: http
           port: 8080
+          targetPort: 3000
       selector:
         app: ${NAME}
   - apiVersion: route.openshift.io/v1
@@ -159,7 +158,7 @@ objects:
       name: ${NAME}
     spec:
       port:
-        targetPort: 8080
+        targetPort: 3000
       to:
         kind: Service
         name: ${NAME}
