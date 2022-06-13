@@ -28,12 +28,12 @@ parameters:
   - name: SOURCE_REPOSITORY_URL
     description: The source URL for the application
     displayName: Source URL
-    value: "https://github.com/nodeshift-starters/react-web-app"
+    value: "https://github.com/nodeshift-blog-examples/react-web-app"
     required: true
   - name: SOURCE_REPOSITORY_REF
     description: The branch name for the application
     displayName: Source Branch
-    value: master
+    value: main
     required: true
   - name: SOURCE_REPOSITORY_DIR
     description: The location within the source repo of the application
